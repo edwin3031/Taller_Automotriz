@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0024B25D-EF1C-49E4-8B61-71DB29B114AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoFinalDeCurso</RootNamespace>
+    <AssemblyName>ProyectoFinalDeCurso</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CAsignarRepuesto.cs" />
+    <Compile Include="Controller\CCliente.cs" />
+    <Compile Include="Controller\CMantenimiento.cs" />
+    <Compile Include="Controller\CMecanico.cs" />
+    <Compile Include="Controller\CRepuesto.cs" />
+    <Compile Include="Controller\CServicio.cs" />
+    <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Controller\CVehiculo.cs" />
+    <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\DAsignarRepuesto.cs" />
+    <Compile Include="Data\DCliente.cs" />
+    <Compile Include="Data\DMantenimiento.cs" />
+    <Compile Include="Data\DMecanico.cs" />
+    <Compile Include="Data\DRepuesto.cs" />
+    <Compile Include="Data\DServicio.cs" />
+    <Compile Include="Data\DUsuario.cs" />
+    <Compile Include="Data\DVehiculo.cs" />
+    <Compile Include="Reportes\DSMantenimientos.cs">
+      <DependentUpon>DSMantenimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSMantenimientos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMantenimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DSServicioMantenimiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSServicioMantenimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionMantenimiento.Designer.cs">
+      <DependentUpon>FrmRecaudacionMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionRepuesto.Designer.cs">
+      <DependentUpon>FrmRecaudacionRepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmRecaudacionServicio.Designer.cs">
+      <DependentUpon>FrmRecaudacionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmMostrarHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmMostrarHistorial.Designer.cs">
+      <DependentUpon>FrmMostrarHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarMecanico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarMecanico.Designer.cs">
+      <DependentUpon>FrmSeleccionarMecanico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarRepuesto.Designer.cs">
+      <DependentUpon>FrmSeleccionarRepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarVehiculo.Designer.cs">
+      <DependentUpon>FrmSeleccionarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmInicioSesion.Designer.cs">
+      <DependentUpon>FrmInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmMantenimiento.Designer.cs">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmMecanico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmMecanico.Designer.cs">
+      <DependentUpon>FrmMecanico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmRepuesto.Designer.cs">
+      <DependentUpon>FrmRepuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmAsignarRepuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmAsignarRepuestos.Designer.cs">
+      <DependentUpon>FrmAsignarRepuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSeleccionarCliente.Designer.cs">
+      <DependentUpon>FrmSeleccionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmSelecionarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmSelecionarServicio.Designer.cs">
+      <DependentUpon>FrmSelecionarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmServicio.Designer.cs">
+      <DependentUpon>FrmServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmVehiculo.Designer.cs">
+      <DependentUpon>FrmVehiculo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reportes\FrmRecaudacionMantenimiento.resx">
+      <DependentUpon>FrmRecaudacionMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmRecaudacionRepuesto.resx">
+      <DependentUpon>FrmRecaudacionRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmRecaudacionServicio.resx">
+      <DependentUpon>FrmRecaudacionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Recaudacion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportMantenimientos.rdlc" />
+    <EmbeddedResource Include="Reportes\Repuesto.rdlc" />
+    <EmbeddedResource Include="Reportes\Servicio.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmMostrarHistorial.resx">
+      <DependentUpon>FrmMostrarHistorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmSeleccionarMecanico.resx">
+      <DependentUpon>FrmSeleccionarMecanico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmSeleccionarRepuesto.resx">
+      <DependentUpon>FrmSeleccionarRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmSeleccionarVehiculo.resx">
+      <DependentUpon>FrmSeleccionarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmInicioSesion.resx">
+      <DependentUpon>FrmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmMantenimiento.resx">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmMecanico.resx">
+      <DependentUpon>FrmMecanico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmRepuesto.resx">
+      <DependentUpon>FrmRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmAsignarRepuestos.resx">
+      <DependentUpon>FrmAsignarRepuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmSeleccionarCliente.resx">
+      <DependentUpon>FrmSeleccionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmSelecionarServicio.resx">
+      <DependentUpon>FrmSelecionarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmServicio.resx">
+      <DependentUpon>FrmServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmVehiculo.resx">
+      <DependentUpon>FrmVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportes\DSMantenimientos.xsc">
+      <DependentUpon>DSMantenimientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSMantenimientos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMantenimientos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSMantenimientos.xss">
+      <DependentUpon>DSMantenimientos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSServicioMantenimiento.xsc">
+      <DependentUpon>DSServicioMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSServicioMantenimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSServicioMantenimiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSServicioMantenimiento.xss">
+      <DependentUpon>DSServicioMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\user_icon-icons.com_57997.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mechanicwrench_118392 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carmechanic_890961.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tech_engine_icon_1574111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1193941503-170x170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115235-exit-logout-sign-out_114030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-book_38572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_96690.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_minimize_icon_181229.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4115230-cancel-close-cross-delete_1140482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_icon-icons.com_579971.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank-check-box_icon-icons.com_72855.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank-check-box_icon-icons.com_728551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOEMPRESA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pereiraservicios-logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basic_todo_txt_40203.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_client_icon-icons.com_72436.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magnifier_41051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside_icon-icons.com_72596 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off_logout_17916 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off_logout_17916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
