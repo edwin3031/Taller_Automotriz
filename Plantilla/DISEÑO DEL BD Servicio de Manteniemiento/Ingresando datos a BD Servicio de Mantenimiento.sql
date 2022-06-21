@@ -3,33 +3,44 @@ go
 
 
 ---Insertando datos en la tabla cliente
-Insert into Cliente values ('Juan','José','Barrios','Canales','82181557','juanj@gmail.com','Managua')
+Insert into Cliente values ('Juan','José','Barrios','Canales','82181557','juanj@gmail.com','Managua','Habilitado')
+Insert into Cliente values ('Joel','Antonio','Barrios','Mendóza','51455223','jbarrios@gmail.com','Masaya','Habilitado')
+Insert into Cliente values ('Alejandor','','Alvarado','Pérez','57844551','aalvarop@gmail.com','Rivas','Habilitado')
+Insert into Cliente values ('Jeison','José','Suarez','Jiménez','57553832','jeisonsuarez2003@gmail.com','Rivas','Habilitado')
+Insert into Cliente values ('Penélope','Daniela','Aragón','Portocarrero','85256332','penelopearagon12@gmail.com','Managua','Habilitado')
+Insert into Cliente values ('Axel','Karim','Saenz','Juarez','86320554','karimsaenz32@gmail.com','Matagalpa','Habilitado')
+Insert into Cliente values ('Kevin','Antonio','Ortiz','','57105110','kevinoortiz21@gmail.com','Rivas','Habilitado')
 
-Insert into Cliente values ('Joel','Antonio','Barrios','Mendóza','51455223','jbarrios@gmail.com','Masaya')
-Insert into Cliente values ('Alejandor','','Alvarado','Pérez','57844551','aalvarop@gmail.com','Rivas')
-Insert into Cliente values ('Jeison','José','Suarez','Jiménez','57553832','jeisonsuarez2003@gmail.com','Rivas')
-Insert into Cliente values ('Penélope','Daniela','Aragón','Portocarrero','85256332','penelopearagon12@gmail.com','Managua')
-Insert into Cliente values ('Axel','Karim','Saenz','Juarez','86320554','karimsaenz32@gmail.com','Matagalpa')
-Insert into Cliente values ('Kevin','Antonio','Ortiz','','57105110','kevinoortiz21@gmail.com','Rivas')
+go
 
 select * from Cliente
 
+go
+
 --- insertando datos en la tabla mecánico
-Insert into Mecánico values ('Juan','Carlos','Villanueva','Ortiz','82181554','juanjc@gmail.com','Managua')
-Insert into Mecánico values ('Danilo','José','Corrales','López','82171557','josess@gmail.com','Managua')
-Insert into Mecánico values ('Allan','','Zambrana','','82923522','zambranaall@gmail.com','Managua')
-Insert into Mecánico values ('Cristopher','','Corrales','Martinez','59623214','martincorr@gmail.com','Managua')
-Insert into Mecánico values ('Ebner','Camilo','Ponce','Ramierez','82181557','ebnercp@gmail.com','Managua')
+Insert into Mecánico values ('Juan','Carlos','Villanueva','Ortiz','82181554','juanjc@gmail.com','Managua','Habilitado')
+Insert into Mecánico values ('Danilo','José','Corrales','López','82171557','josess@gmail.com','Managua','Habilitado')
+Insert into Mecánico values ('Allan','','Zambrana','','82923522','zambranaall@gmail.com','Managua','Habilitado')
+Insert into Mecánico values ('Cristopher','','Corrales','Martinez','59623214','martincorr@gmail.com','Managua','Habilitado')
+Insert into Mecánico values ('Ebner','Camilo','Ponce','Ramierez','82181557','ebnercp@gmail.com','Managua','Habilitado')
+
+go
 
 select * from Mecánico
 
+go
 --- insertando datos en la tabla repuesto 
 Insert into Repuesto values ('Honda','SS101','Banda de distribución',150)
 Insert into Repuesto values ('Yamaha','QWA22','shock block',134)
 Insert into Repuesto values ('BOSCH','SLA1','Filtro de aceite',300)
 Insert into Repuesto values ('ACDelco','QWS2','Bujía',134)
 Insert into Repuesto values ('VALEO','SOCA1','Filtro de gasolina',300)
+
+go
+
 SELECT * FROM Repuesto
+
+go
 ---insertando datos en la tabla vehículo
 Insert into Vehículo values (1,'BMW','X4','2018')
 Insert into Vehículo values (1,'BMW','SERIE 3','2010')
@@ -41,7 +52,11 @@ Insert into Vehículo values (5,'Lexus','MA10','2014')
 Insert into Vehículo values (6,'Seat','F50','2018')
 Insert into Vehículo values (7,'Opel','R50','2020')
 
+go
+
 select * from Vehículo
+
+go
 
 ---insertando datos en la tabla Mantenimiento
 Insert into Mantenimiento values (1,'2020-03-03','2020-03-03','Reparado')
@@ -52,7 +67,11 @@ Insert into Mantenimiento values (6,'2020-06-12','2020-06-15','Reparado')
 Insert into Mantenimiento values (5,'2020-03-03','2020-03-03','Reparado')
 Insert into Mantenimiento values (1,'2020-12-03','2020-12-03','Reparado')
 
+go
+
 select * from Mantenimiento
+
+go
 
 ---insertando datos en la tabla servicio
 Insert into Servicio values ('Cambio de aceite',140,'ORDINARIO')
@@ -62,6 +81,7 @@ Insert into Servicio values ('Mantenimiento 5000 km ',1500,'ORDINARIO')
 Insert into Servicio values ('Revisión del Sistema Eléctrico',400,'EXTRAORDINARIO')
 Insert into Servicio values ('Reparación de aire acondicionado',2000,'EXTRAORDINARIO')
 
+go
 
 ---insertando datos es detallemantenimiento 
  Insert into Detalle_Mantenimiento values (1,1,1,2700)
@@ -70,7 +90,11 @@ Insert into Servicio values ('Reparación de aire acondicionado',2000,'EXTRAORDIN
  Insert into Detalle_Mantenimiento values (1,3,2,2000)
  Insert into Detalle_Mantenimiento values (3,2,2,1500)
 
+ go
+
  select * from Detalle_Mantenimiento
+
+ go
 
  ---insertando datos en detallerepuesto
  Insert into Detalle_Repuesto values (1,1,500,1)
@@ -78,6 +102,8 @@ Insert into Servicio values ('Reparación de aire acondicionado',2000,'EXTRAORDIN
  Insert into Detalle_Repuesto values (3,3,100,1)
  Insert into Detalle_Repuesto values (1,3,800,2)
  Insert into Detalle_Repuesto values (4,4,100,1)
+
+ go
 
  ----consultando a todas las tablas
  select * from Detalle_Repuesto

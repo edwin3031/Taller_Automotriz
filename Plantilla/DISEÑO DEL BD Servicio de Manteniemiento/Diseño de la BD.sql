@@ -1,10 +1,13 @@
-Create database Servicios_de_mantenimiento
+create database Servicios_de_mantenimiento
+
+go
 
 Use Servicios_de_mantenimiento
+
 go
 
 ---creando la tabla cliente
-Create table Cliente
+create table Cliente
 (IDCliente int primary key identity(1,1),
  [Primer Nombre] varchar(50) not null,
  [Segundo Nombre] varchar(50) null,
@@ -12,8 +15,11 @@ Create table Cliente
  [Segundo Apellido] varchar(50) null,
  Telefono varchar (40),
  Correo varchar (60),
- Direccion varchar (60)
+ Direccion varchar (60),
+ Estado varchar(50) null
 )
+
+go
 
 ---creando la tabla vehículo
 
@@ -24,6 +30,8 @@ Marca varchar(50),
 Modelo varchar (50),
 Año varchar (50))
 
+go
+
 ---creando la tabla servicio
 
 Create table Servicio
@@ -31,6 +39,8 @@ Create table Servicio
 Descripción varchar (50),
 Precio float,
 Tipo_Mantenimiento varchar (50))
+
+go
 
 ---creando la tabla mantenimiento 
 Create table Mantenimiento
@@ -40,6 +50,8 @@ Fecha_Ingreso date not null,
 Fecha_Salida date not null,
 Estado varchar (50))
 
+go
+
 ---creando la tabla Detalle mantenimiento 
 Create table Detalle_Mantenimiento
 (IDDetalle_Mantenimiento int primary key identity (1,1),
@@ -48,7 +60,7 @@ IDMecánico int not null,
 IDServicio int not null ,
 Precio float not null)
 
- 
+ go
 
 ---crando la tabla repuesto 
 Create table Repuesto 
@@ -59,6 +71,8 @@ Descripcion varchar (60) not null ,
 Cantidad int 
 )
 
+go
+
 ---crando la tabla Detalle repuesto 
 Create table Detalle_Repuesto 
 (IDDetalle_Mantenimiento int ,
@@ -67,8 +81,10 @@ Precio float,
 Cantidad int 
 )
 
+go
+
 ---creando la tabla mecánico
-Create table Mecánico 
+Create table Mecánico
 (IDMecánico int primary key identity (1,1),
  [Primer Nombre] varchar(50) not null,
  [Segundo Nombre] varchar(50) null,
@@ -76,20 +92,26 @@ Create table Mecánico
  [Segundo Apellido] varchar(50) null,
  Telefono varchar (40),
  Correo varchar (60),
- Direccion varchar (60)
+ Direccion varchar (60),
+ Estado varchar(50)
 
  )
-CREATE TABLE Usuarios(
+
+ go
+
+create TABLE Usuario(
 IdUsuario int primary key identity (1,1),
 Usuario varchar(50) not null,
-Contrasena varchar(MAX) not null,
+Contrasenia varchar(MAX) not null,
 Rol varchar(50),
 Estado varchar(50)
 )
 
+go
+
 CREATE TABLE Colaborador(
 IdColaborador int primary key identity(1,1),
-IdUsuario int foreign key references Usuarios(IdUsuario),
+IdUsuario int foreign key references Usuario(IdUsuario),
 PrimerNombre varchar (30),
 SegundoNombre varchar (30),
 PrimerApellido varchar(30),
@@ -98,6 +120,7 @@ Direccion varchar (80),
 Telefono varchar (30)
 )
 
+go
 
  ---Creando relacion entre tablas cliente y vehiculo
  ALTER TABLE Vehículo
