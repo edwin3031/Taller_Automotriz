@@ -68,17 +68,19 @@ Create table Repuesto
 Marca varchar(50) not null,
 Modelo varchar (50)not null,
 Descripcion varchar (60) not null ,
-Cantidad int 
+Cantidad int,
+Precio float,
 )
 
 go
 
 ---crando la tabla Detalle repuesto 
-Create table Detalle_Repuesto 
-(IDDetalle_Mantenimiento int ,
+create table Detalle_Repuesto 
+(IDDetalle_Repuesto int primary key identity (1,1),
+IDDetalle_Mantenimiento int ,
 IDRepuesto int,
-Precio float,
-Cantidad int 
+Cantidad int,
+Autorizacion char(2) 
 )
 
 go
@@ -118,6 +120,14 @@ PrimerApellido varchar(30),
 SegundoApellido varchar(30),
 Direccion varchar (80),
 Telefono varchar (30)
+)
+
+go
+
+create table Factura(
+No_Factura int identity(1,1) primary key not null,
+IDMantenimiento int foreign key references Mantenimiento(IDMantenimiento) not null,
+
 )
 
 go
