@@ -76,7 +76,8 @@ go
 
 ---crando la tabla Detalle repuesto 
 create table Detalle_Repuesto 
-(IDDetalle_Mantenimiento int ,
+(IDDetalle_Repuesto int primary key identity (1,1),
+IDDetalle_Mantenimiento int ,
 IDRepuesto int,
 Cantidad int,
 Autorizacion char(2) 

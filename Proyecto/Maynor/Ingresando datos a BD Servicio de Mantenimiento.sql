@@ -111,11 +111,15 @@ go
  go
 
  ---insertando datos en detallerepuesto
- Insert into Detalle_Repuesto (IDRepuesto,Cantidad,Autorizacion) values (1,1,1,'si')
- Insert into Detalle_Repuesto (IDRepuesto,Cantidad,Autorizacion) values (2,2,1,'no')
- Insert into Detalle_Repuesto (IDRepuesto,Cantidad,Autorizacion) values (3,3,1,'no')
- Insert into Detalle_Repuesto (IDRepuesto,Cantidad,Autorizacion) values (1,3,2,'si')
- Insert into Detalle_Repuesto (IDRepuesto,Cantidad,Autorizacion) values (4,4,1,'si')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (1,1,1,'si')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (2,2,1,'no')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (3,3,1,'no')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (1,3,2,'si')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (4,4,1,'si')
+
+ go
+
+ select * from Detalle_Repuesto
 
  go
  --insertando datos de factura
