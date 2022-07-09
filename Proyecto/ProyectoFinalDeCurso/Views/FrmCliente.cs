@@ -90,7 +90,7 @@ namespace ProyectoFinalDeCurso.Views
                 }
                 else
                 {
-                    rpta = CCliente.Actualizar_Clientes(Convert.ToInt32(this.dtCliente.CurrentRow.Cells["IdCliente"].Value),
+                    rpta = CCliente.Actualizar_Clientes(Convert.ToInt32(this.dtCliente.CurrentRow.Cells["ID Cliente"].Value),
                        this.txtNombreCliente.Text, this.txtNombreCliente2.Text, this.txtApellidoCliente.Text,
                         this.txtApellidoCliente2.Text, this.txtDireccion.Text, txtCorreo.Text, this.txtTelefono.Text);
 
@@ -247,14 +247,14 @@ namespace ProyectoFinalDeCurso.Views
 
         private void dtCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtNombreCliente.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["PrimerNombre"].Value);
-            this.txtNombreCliente2.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["SegundoNombre"].Value); 
-            this.txtApellidoCliente.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["PrimerApellido"].Value); 
-            this.txtApellidoCliente2.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["SegundoApellido"].Value); 
-            this.txtDireccion.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Direccion"].Value); 
+            this.txtNombreCliente.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Primer Nombre"].Value);
+            this.txtNombreCliente2.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Segundo Nombre"].Value); 
+            this.txtApellidoCliente.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Primer Apellido"].Value); 
+            this.txtApellidoCliente2.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Segundo Apellido"].Value); 
+            this.txtDireccion.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Dirección"].Value); 
             this.txtCorreo.Text = Convert.ToString(this.dtCliente.CurrentRow.Cells["Correo"].Value);
             string telefono;
-            telefono = Convert.ToString(this.dtCliente.CurrentRow.Cells["Telefono"].Value);
+            telefono = Convert.ToString(this.dtCliente.CurrentRow.Cells["Teléfono"].Value);
             this.txtTelefono.Text = telefono;
             
         }
