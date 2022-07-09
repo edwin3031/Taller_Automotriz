@@ -28,7 +28,7 @@ create table Vehículo
 IdCliente int not null,
 Marca varchar(50),
 Modelo varchar (50),
-Año varchar (50))
+Año int)
 
 go
 

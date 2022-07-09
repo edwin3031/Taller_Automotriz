@@ -122,9 +122,8 @@ namespace ProyectoFinalDeCurso.Views
                 }
                 else
                 {
-                    rpta = CVehiculo.Actualizar_Vehiculo(Convert.ToInt32(this.dtVehículos.CurrentRow.Cells["IdVehiculo"].Value),
-                       Convert.ToInt32(this.dtVehículos.CurrentRow.Cells["IdCliente"].Value), this.txtMarca.Text, this.txtModelo.Text, Convert.ToInt32(this.txtAño.Text));
-
+                    rpta = CVehiculo.Actualizar_Vehiculo(Convert.ToInt32(this.dtVehículos.CurrentRow.Cells["ID Vehículo"].Value),
+                                           Convert.ToInt32(this.dtVehículos.CurrentRow.Cells["Nombre Cliente"].Value), this.txtMarca.Text, this.txtModelo.Text, Convert.ToInt32(this.txtAño.Text));
                 }
 
                 if (rpta.Equals("OK"))
@@ -162,7 +161,7 @@ namespace ProyectoFinalDeCurso.Views
 
         private void dtVehículos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtIdCliente.Text = Convert.ToString(this.dtVehículos.CurrentRow.Cells["Cliente"].Value);
+            this.txtIdCliente.Text = Convert.ToString(this.dtVehículos.CurrentRow.Cells["Nombre Cliente"].Value);
             this.txtMarca.Text = Convert.ToString(this.dtVehículos.CurrentRow.Cells["Marca"].Value);
             this.txtModelo.Text = Convert.ToString(this.dtVehículos.CurrentRow.Cells["Modelo"].Value);
             this.txtAño.Text = Convert.ToString(this.dtVehículos.CurrentRow.Cells["Año"].Value);

@@ -33,13 +33,13 @@ namespace ProyectoFinalDeCurso.Views
         public void Mostrar()
         {
             this.dtServico.DataSource = CServicio.Mostrar_Servicio();
-            this.dtServico.Columns[0].Visible = false;
+            //this.dtServico.Columns[0].Visible = false;
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             this.dtServico.DataSource = CServicio.Buscar_Servicio(this.txtFiltro.Text);
-            this.dtServico.Columns[0].Visible = false;
+            //this.dtServico.Columns[0].Visible = false;
 
         }
 
@@ -131,7 +131,7 @@ namespace ProyectoFinalDeCurso.Views
                 }
                 else
                 {
-                    rpta = CServicio.Actualizar_Servicio(Convert.ToInt32(this.dtServico.CurrentRow.Cells["IdServicio"].Value),
+                    rpta = CServicio.Actualizar_Servicio(Convert.ToInt32(this.dtServico.CurrentRow.Cells["ID Servicio"].Value),
                       this.txtDescripcion.Text, Convert.ToDecimal(this.txtPrecio.Text), this.cmbTipo.Text);
 
                 }
@@ -171,10 +171,10 @@ namespace ProyectoFinalDeCurso.Views
 
         private void dtServico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtDescripcion.Text = Convert.ToString(this.dtServico.CurrentRow.Cells["Descripcion"].Value);
+            this.txtDescripcion.Text = Convert.ToString(this.dtServico.CurrentRow.Cells["Descripción"].Value);
             this.txtPrecio.Text = Convert.ToString(this.dtServico.CurrentRow.Cells["Precio"].Value);
             this.cmbTipo.DropDownStyle = ComboBoxStyle.DropDown;
-            this.cmbTipo.Text = Convert.ToString(this.dtServico.CurrentRow.Cells["TipoMantenimiento"].Value);
+            this.cmbTipo.Text = Convert.ToString(this.dtServico.CurrentRow.Cells["Tipo de Mantenimiento"].Value);
             this.cmbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
 
 

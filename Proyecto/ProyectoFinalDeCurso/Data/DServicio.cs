@@ -45,7 +45,7 @@ namespace ProyectoFinalDeCurso.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Buscar_Servicio";
+                SqlCmd.CommandText = "Buscar_Servicios";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 //   Cargando el parámetro de búsqueda en el procedimiento almacenado

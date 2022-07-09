@@ -63,14 +63,14 @@ SELECT * FROM Repuesto
 
 go
 ---insertando datos en la tabla vehículo
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','X4','2018')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','SERIE 3','2010')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (4,'Audi','X4','2012')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (3,'Ford','F150','1999')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (2,'Seat','F50','2018')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (5,'Lexus','MA10','2014')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (6,'Seat','F50','2018')
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (7,'Opel','R50','2020')
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','X4',2018)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','SERIE 3',2010)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (4,'Audi','X4',2012)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (3,'Ford','F150',1999)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (2,'Seat','F50',2018)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (5,'Lexus','MA10',2014)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (6,'Seat','F50',2018)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (7,'Opel','R50',2020)
 
 go
 
