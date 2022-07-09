@@ -92,8 +92,10 @@ Create table Mecánico
  [Segundo Nombre] varchar(50) null,
  [Primer Apellido] varchar(50) not null,
  [Segundo Apellido] varchar(50) null,
+ Especialidad varchar(50) null,
  Telefono varchar (40),
  Correo varchar (60),
+ Salario money,
  Direccion varchar (60),
  Estado varchar(60)
 

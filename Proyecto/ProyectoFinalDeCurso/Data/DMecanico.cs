@@ -21,7 +21,7 @@ namespace ProyectoFinalDeCurso.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Mecanicos";
+                SqlCmd.CommandText = "Mostrar_Mecanico";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 
@@ -121,8 +121,6 @@ namespace ProyectoFinalDeCurso.Data
                 ParEspecialidad.Value = especialidad;
                 SqlCmd.Parameters.Add(ParEspecialidad);
 
-                
-
                 SqlParameter ParTelefono = new SqlParameter();
                 ParTelefono.ParameterName = "@telefono";
                 ParTelefono.SqlDbType = SqlDbType.VarChar;
@@ -138,7 +136,7 @@ namespace ProyectoFinalDeCurso.Data
                 SqlCmd.Parameters.Add(ParCorreo);
 
                 SqlParameter ParSalario = new SqlParameter();
-                ParSalario.ParameterName = "salario";
+                ParSalario.ParameterName = "@salario";
                 ParSalario.SqlDbType = SqlDbType.Money;
                 ParSalario.Value = salario;
                 SqlCmd.Parameters.Add(ParSalario);

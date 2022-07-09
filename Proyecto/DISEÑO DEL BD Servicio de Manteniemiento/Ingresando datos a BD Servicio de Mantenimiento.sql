@@ -24,16 +24,26 @@ select * from Cliente
 go
 
 --- insertando datos en la tabla mecánico
-Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido], Telefono, Correo, Direccion, Estado) 
-values ('Juan','Carlos','Villanueva','Ortiz','82181554','juanjc@gmail.com','Managua','Habilitado')
-Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido], Telefono, Correo, Direccion, Estado) 
-values ('Danilo','José','Corrales','López','82171557','josess@gmail.com','Managua','Habilitado')
-Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido], Telefono, Correo, Direccion, Estado)
-values ('Allan','','Zambrana','','82923522','zambranaall@gmail.com','Managua','Habilitado')
-Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido], Telefono, Correo, Direccion, Estado)
-values ('Cristopher','','Corrales','Martinez','59623214','martincorr@gmail.com','Managua','Habilitado')
-Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido], Telefono, Correo, Direccion, Estado)
-values ('Ebner','Camilo','Ponce','Ramierez','82181557','ebnercp@gmail.com','Managua','Habilitado')
+Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],
+Telefono, Especialidad, Correo, Salario, Direccion, Estado) 
+values ('Juan','Carlos','Villanueva','Ortiz',
+'82181554','Sistema Eléctrico','juanjc@gmail.com',10000,'Managua','Habilitado')
+Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],
+Telefono, Especialidad, Correo, Salario, Direccion, Estado) 
+values ('Danilo','José','Corrales','López',
+'82171557','Sistema Refrigeración','josess@gmail.com',12000,'Managua','Habilitado')
+Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],
+Telefono, Especialidad, Correo, Salario, Direccion, Estado)
+values ('Allan','','Zambrana','',
+'82923522','Ayudante','zambranaall@gmail.com',11000,'Managua','Habilitado')
+Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],
+Telefono, Especialidad, Correo, Salario, Direccion, Estado)
+values ('Cristopher','','Corrales','Martinez',
+'59623214','Ingeniero Mecánico','martincorr@gmail.com',12000,'Managua','Habilitado')
+Insert into Mecánico ([Primer Nombre],[Segundo Nombre],[Primer Apellido],[Segundo Apellido],
+Telefono, Especialidad, Correo, Salario, Direccion, Estado)
+values ('Ebner','Camilo','Ponce','Ramierez',
+'82181557','Técnico','ebnercp@gmail.com',10000,'Managua','Habilitado')
 
 go
 

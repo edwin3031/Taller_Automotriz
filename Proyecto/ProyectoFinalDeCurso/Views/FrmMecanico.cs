@@ -253,13 +253,13 @@ namespace ProyectoFinalDeCurso.Views
 
         private void dtMecanico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txtNombreMecanico.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["PrimerNombre"].Value);
-            this.txtNombreMecanico2.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["SegundoNombre"].Value); ;
-            this.txtApellidoMecanico.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["PrimerApellido"].Value); ;
-            this.txtApellidoMecanico2.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["SegundoApellido"].Value); ;
-            this.txtDireccion.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Direccion"].Value); ;
+            this.txtNombreMecanico.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Primer Nombre"].Value);
+            this.txtNombreMecanico2.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Segundo Nombre"].Value); ;
+            this.txtApellidoMecanico.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Primer Apellido"].Value); ;
+            this.txtApellidoMecanico2.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Segundo Apellido"].Value); ;
+            this.txtDireccion.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Dirección"].Value); ;
             this.txtCorreo.Text = Convert.ToString(this.dtMecanico.CurrentRow.Cells["Correo"].Value); ;
-            this.txtTelefono.Text = this.dtMecanico.CurrentRow.Cells["Telefono"].Value.ToString();
+            this.txtTelefono.Text = this.dtMecanico.CurrentRow.Cells["Teléfono"].Value.ToString();
             this.txtSalario.Text = this.dtMecanico.CurrentRow.Cells["Salario"].Value.ToString();
 
             this.cmbEspecialidad.DropDownStyle = ComboBoxStyle.DropDown;
@@ -268,7 +268,10 @@ namespace ProyectoFinalDeCurso.Views
 
         }
 
-       
+        private void cmbEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     } 
             
 }

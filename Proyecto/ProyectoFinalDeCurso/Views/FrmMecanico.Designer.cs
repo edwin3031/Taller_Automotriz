@@ -81,9 +81,11 @@ namespace ProyectoFinalDeCurso.Views
             this.groupBox1.Controls.Add(this.dtMecanico);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox1.Location = new System.Drawing.Point(0, 303);
+            this.groupBox1.Location = new System.Drawing.Point(0, 373);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1015, 207);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1353, 255);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tabla Mecánico";
@@ -93,9 +95,10 @@ namespace ProyectoFinalDeCurso.Views
             this.txtFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltro.BackColor = System.Drawing.Color.White;
-            this.txtFiltro.Location = new System.Drawing.Point(6, 19);
+            this.txtFiltro.Location = new System.Drawing.Point(8, 23);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(1003, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(1336, 26);
             this.txtFiltro.TabIndex = 49;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
@@ -111,11 +114,12 @@ namespace ProyectoFinalDeCurso.Views
             this.dtMecanico.BackgroundColor = System.Drawing.Color.White;
             this.dtMecanico.CausesValidation = false;
             this.dtMecanico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtMecanico.Location = new System.Drawing.Point(6, 47);
+            this.dtMecanico.Location = new System.Drawing.Point(8, 58);
+            this.dtMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtMecanico.Name = "dtMecanico";
             this.dtMecanico.ReadOnly = true;
             this.dtMecanico.RowHeadersWidth = 42;
-            this.dtMecanico.Size = new System.Drawing.Size(1000, 154);
+            this.dtMecanico.Size = new System.Drawing.Size(1333, 190);
             this.dtMecanico.TabIndex = 1;
             this.dtMecanico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtMecanico_CellDoubleClick);
             // 
@@ -129,9 +133,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 267);
+            this.btnNuevo.Location = new System.Drawing.Point(16, 329);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(182, 30);
+            this.btnNuevo.Size = new System.Drawing.Size(243, 37);
             this.btnNuevo.TabIndex = 68;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -147,9 +152,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(215, 267);
+            this.btnGuardar.Location = new System.Drawing.Point(287, 329);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(182, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(243, 37);
             this.btnGuardar.TabIndex = 77;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -165,9 +171,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizar.Location = new System.Drawing.Point(418, 267);
+            this.btnActualizar.Location = new System.Drawing.Point(557, 329);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(182, 30);
+            this.btnActualizar.Size = new System.Drawing.Size(243, 37);
             this.btnActualizar.TabIndex = 73;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -183,9 +190,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(824, 267);
+            this.btnCancelar.Location = new System.Drawing.Point(1099, 329);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(182, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(243, 37);
             this.btnCancelar.TabIndex = 74;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -194,49 +202,55 @@ namespace ProyectoFinalDeCurso.Views
             // txtApellidoMecanico2
             // 
             this.txtApellidoMecanico2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellidoMecanico2.Location = new System.Drawing.Point(184, 195);
+            this.txtApellidoMecanico2.Location = new System.Drawing.Point(245, 240);
+            this.txtApellidoMecanico2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellidoMecanico2.Name = "txtApellidoMecanico2";
-            this.txtApellidoMecanico2.Size = new System.Drawing.Size(312, 20);
+            this.txtApellidoMecanico2.Size = new System.Drawing.Size(415, 22);
             this.txtApellidoMecanico2.TabIndex = 58;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDireccion.Location = new System.Drawing.Point(677, 84);
+            this.txtDireccion.Location = new System.Drawing.Point(903, 103);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(312, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(415, 22);
             this.txtDireccion.TabIndex = 67;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCorreo.Location = new System.Drawing.Point(677, 160);
+            this.txtCorreo.Location = new System.Drawing.Point(903, 197);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(312, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(415, 22);
             this.txtCorreo.TabIndex = 66;
             // 
             // txtApellidoMecanico
             // 
             this.txtApellidoMecanico.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellidoMecanico.Location = new System.Drawing.Point(184, 158);
+            this.txtApellidoMecanico.Location = new System.Drawing.Point(245, 194);
+            this.txtApellidoMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellidoMecanico.Name = "txtApellidoMecanico";
-            this.txtApellidoMecanico.Size = new System.Drawing.Size(312, 20);
+            this.txtApellidoMecanico.Size = new System.Drawing.Size(415, 22);
             this.txtApellidoMecanico.TabIndex = 57;
             // 
             // txtNombreMecanico2
             // 
             this.txtNombreMecanico2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombreMecanico2.Location = new System.Drawing.Point(184, 121);
+            this.txtNombreMecanico2.Location = new System.Drawing.Point(245, 149);
+            this.txtNombreMecanico2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreMecanico2.Name = "txtNombreMecanico2";
-            this.txtNombreMecanico2.Size = new System.Drawing.Size(312, 20);
+            this.txtNombreMecanico2.Size = new System.Drawing.Size(415, 22);
             this.txtNombreMecanico2.TabIndex = 56;
             // 
             // txtNombreMecanico
             // 
             this.txtNombreMecanico.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombreMecanico.Location = new System.Drawing.Point(184, 84);
+            this.txtNombreMecanico.Location = new System.Drawing.Point(245, 103);
+            this.txtNombreMecanico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreMecanico.Name = "txtNombreMecanico";
-            this.txtNombreMecanico.Size = new System.Drawing.Size(312, 20);
+            this.txtNombreMecanico.Size = new System.Drawing.Size(415, 22);
             this.txtNombreMecanico.TabIndex = 55;
             // 
             // btnEstado
@@ -249,9 +263,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEstado.Location = new System.Drawing.Point(621, 267);
+            this.btnEstado.Location = new System.Drawing.Point(828, 329);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(182, 30);
+            this.btnEstado.Size = new System.Drawing.Size(243, 37);
             this.btnEstado.TabIndex = 70;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = false;
@@ -268,17 +283,19 @@ namespace ProyectoFinalDeCurso.Views
             this.panel1.Controls.Add(this.Mecanico);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 50);
+            this.panel1.Size = new System.Drawing.Size(1357, 61);
             this.panel1.TabIndex = 78;
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(941, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1255, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimizar.Size = new System.Drawing.Size(27, 25);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimizar.TabIndex = 7;
             this.btnMinimizar.TabStop = false;
@@ -287,9 +304,10 @@ namespace ProyectoFinalDeCurso.Views
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(967, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(1289, 4);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(20, 20);
+            this.btnRestaurar.Size = new System.Drawing.Size(27, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRestaurar.TabIndex = 6;
             this.btnRestaurar.TabStop = false;
@@ -298,9 +316,10 @@ namespace ProyectoFinalDeCurso.Views
             // btnMaximizar
             // 
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(969, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(1292, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMaximizar.Size = new System.Drawing.Size(27, 25);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.TabStop = false;
@@ -309,9 +328,10 @@ namespace ProyectoFinalDeCurso.Views
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(993, 3);
+            this.btnSalir.Location = new System.Drawing.Point(1324, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.Size = new System.Drawing.Size(27, 25);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 4;
             this.btnSalir.TabStop = false;
@@ -325,9 +345,10 @@ namespace ProyectoFinalDeCurso.Views
             this.Mecanico.ForeColor = System.Drawing.Color.White;
             this.Mecanico.Image = global::ProyectoFinalDeCurso.Properties.Resources.tech_engine_icon_1574112;
             this.Mecanico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Mecanico.Location = new System.Drawing.Point(451, 9);
+            this.Mecanico.Location = new System.Drawing.Point(601, 11);
+            this.Mecanico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Mecanico.Name = "Mecanico";
-            this.Mecanico.Size = new System.Drawing.Size(192, 33);
+            this.Mecanico.Size = new System.Drawing.Size(241, 40);
             this.Mecanico.TabIndex = 0;
             this.Mecanico.Text = "      Mecánico";
             this.Mecanico.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -339,9 +360,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label8.Location = new System.Drawing.Point(538, 83);
+            this.label8.Location = new System.Drawing.Point(717, 102);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 18);
+            this.label8.Size = new System.Drawing.Size(103, 23);
             this.label8.TabIndex = 91;
             this.label8.Text = "Dirección:";
             // 
@@ -351,9 +373,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label7.Location = new System.Drawing.Point(538, 159);
+            this.label7.Location = new System.Drawing.Point(717, 196);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 18);
+            this.label7.Size = new System.Drawing.Size(78, 23);
             this.label7.TabIndex = 90;
             this.label7.Text = "Correo:";
             // 
@@ -363,9 +386,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label6.Location = new System.Drawing.Point(538, 121);
+            this.label6.Location = new System.Drawing.Point(717, 149);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 18);
+            this.label6.Size = new System.Drawing.Size(118, 23);
             this.label6.TabIndex = 89;
             this.label6.Text = "Nº Teléfono:";
             // 
@@ -375,9 +399,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label5.Location = new System.Drawing.Point(12, 194);
+            this.label5.Location = new System.Drawing.Point(16, 239);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 18);
+            this.label5.Size = new System.Drawing.Size(181, 23);
             this.label5.TabIndex = 88;
             this.label5.Text = "Segundo Apellido:";
             // 
@@ -387,9 +412,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label4.Location = new System.Drawing.Point(12, 157);
+            this.label4.Location = new System.Drawing.Point(16, 193);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 18);
+            this.label4.Size = new System.Drawing.Size(157, 23);
             this.label4.TabIndex = 87;
             this.label4.Text = "Primer Apellido:";
             // 
@@ -399,9 +425,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(12, 120);
+            this.label3.Location = new System.Drawing.Point(16, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 18);
+            this.label3.Size = new System.Drawing.Size(177, 23);
             this.label3.TabIndex = 86;
             this.label3.Text = "Segundo Nombre:";
             // 
@@ -411,19 +438,21 @@ namespace ProyectoFinalDeCurso.Views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Location = new System.Drawing.Point(16, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 18);
+            this.label2.Size = new System.Drawing.Size(153, 23);
             this.label2.TabIndex = 85;
             this.label2.Text = "Primer Nombre:";
             // 
             // txtTelefono
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTelefono.Location = new System.Drawing.Point(677, 122);
+            this.txtTelefono.Location = new System.Drawing.Point(903, 150);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefono.Mask = "000-0000-0000";
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(312, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(415, 22);
             this.txtTelefono.TabIndex = 97;
             // 
             // label1
@@ -432,18 +461,20 @@ namespace ProyectoFinalDeCurso.Views
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(12, 230);
+            this.label1.Location = new System.Drawing.Point(16, 283);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 18);
+            this.label1.Size = new System.Drawing.Size(74, 23);
             this.label1.TabIndex = 99;
             this.label1.Text = "Salario";
             // 
             // txtSalario
             // 
             this.txtSalario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSalario.Location = new System.Drawing.Point(184, 231);
+            this.txtSalario.Location = new System.Drawing.Point(245, 284);
+            this.txtSalario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(312, 20);
+            this.txtSalario.Size = new System.Drawing.Size(415, 22);
             this.txtSalario.TabIndex = 98;
             // 
             // label9
@@ -452,9 +483,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label9.Location = new System.Drawing.Point(538, 194);
+            this.label9.Location = new System.Drawing.Point(717, 239);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 18);
+            this.label9.Size = new System.Drawing.Size(137, 23);
             this.label9.TabIndex = 90;
             this.label9.Text = "Especialidad:";
             // 
@@ -470,17 +502,19 @@ namespace ProyectoFinalDeCurso.Views
             "Ayudante",
             "Ingeniero Mecánico",
             "Técnico"});
-            this.cmbEspecialidad.Location = new System.Drawing.Point(677, 193);
+            this.cmbEspecialidad.Location = new System.Drawing.Point(903, 238);
+            this.cmbEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEspecialidad.Name = "cmbEspecialidad";
-            this.cmbEspecialidad.Size = new System.Drawing.Size(312, 21);
+            this.cmbEspecialidad.Size = new System.Drawing.Size(415, 24);
             this.cmbEspecialidad.TabIndex = 100;
+            this.cmbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cmbEspecialidad_SelectedIndexChanged);
             // 
             // FrmMecanico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 522);
+            this.ClientSize = new System.Drawing.Size(1357, 642);
             this.Controls.Add(this.cmbEspecialidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSalario);
@@ -508,7 +542,8 @@ namespace ProyectoFinalDeCurso.Views
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(752, 411);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1003, 506);
             this.Name = "FrmMecanico";
             this.Text = "Mecánico";
             this.Load += new System.EventHandler(this.FrmMecanico_Load);
