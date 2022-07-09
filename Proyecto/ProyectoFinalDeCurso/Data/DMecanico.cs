@@ -284,7 +284,7 @@ namespace ProyectoFinalDeCurso.Data
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Cambiar_Estado_Mecanico";
+                SqlCmd.CommandText = "Cambio_Estado_Mecanico";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado

@@ -12,7 +12,7 @@ namespace ProyectoFinalDeCurso.Data
     {
         public static DataTable Mostrar_Vehiculo()
         {
-            DataTable DtResultado = new DataTable("MostrarVehiculo");
+            DataTable DtResultado = new DataTable("Mostrar_Vehiculo");
             SqlConnection SqlCon = new SqlConnection();
             try
             {    // Cargando el conexión al servidor
@@ -37,7 +37,7 @@ namespace ProyectoFinalDeCurso.Data
 
         public static DataTable Buscar_Vehiculo(string texto)
         {
-            DataTable DtResultado = new DataTable("MostrarVehiculo");
+            DataTable DtResultado = new DataTable("Mostrar_Vehiculo");
             SqlConnection SqlCon = new SqlConnection();
             try
             {    // Cargando el conexión al servidor
@@ -105,7 +105,7 @@ namespace ProyectoFinalDeCurso.Data
                 SqlCmd.Parameters.Add(modeloV);
 
                 SqlParameter añoV = new SqlParameter();
-                añoV.ParameterName = "aAño";
+                añoV.ParameterName = "@año";
                 añoV.SqlDbType = SqlDbType.Int;
                 añoV.Value = año;
                 SqlCmd.Parameters.Add(añoV);

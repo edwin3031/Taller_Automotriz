@@ -26,7 +26,7 @@ namespace ProyectoFinalDeCurso.Views
         public void Mostrar()
         {
             this.dtMecanico.DataSource = CMecanico.Mostrar_Mecanico();
-            dtMecanico.Columns[0].Visible = false;
+            //dtMecanico.Columns[0].Visible = false;
             this.cmbEspecialidad.SelectedIndex = 1;
         }
 
@@ -190,7 +190,7 @@ namespace ProyectoFinalDeCurso.Views
                     string rpta = "";
 
 
-                    rpta = CMecanico.Actualizar_Estado(Convert.ToInt32(this.dtMecanico.CurrentRow.Cells["IdMecanico"].Value));
+                    rpta = CMecanico.Actualizar_Estado(Convert.ToInt32(this.dtMecanico.CurrentRow.Cells["ID Mecanico"].Value));
 
                     if (rpta.Equals("OK"))
                     {

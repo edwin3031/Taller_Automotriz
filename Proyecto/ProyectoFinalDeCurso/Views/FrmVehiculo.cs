@@ -31,8 +31,8 @@ namespace ProyectoFinalDeCurso.Views
         public void Mostrar()
         {
             this.dtVehículos.DataSource = CVehiculo.Mostrar_Vehiculo();
-            this.dtVehículos.Columns[0].Visible = false;
-            this.dtVehículos.Columns[1].Visible = false;
+            //this.dtVehículos.Columns[0].Visible = false;
+            //this.dtVehículos.Columns[1].Visible = false;
         }
 
         private void FrmVehiculo_Load(object sender, EventArgs e)
