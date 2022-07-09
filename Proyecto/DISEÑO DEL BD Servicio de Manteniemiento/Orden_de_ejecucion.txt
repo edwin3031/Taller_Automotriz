@@ -1,4 +1,7 @@
 Orden de ejecucion de los scripts:
 
 1) Diseño de la BD
-2) Ingresando datos a BD
+2) Login
+3) Ingresando datos a BD
+4) TODOS LOS STORED PROCEDURES
+5) Factura
