@@ -13,7 +13,7 @@ namespace ProyectoFinalDeCurso.Data
 
         public static DataTable Mostrar_Mecanico()
         {
-            DataTable DtResultado = new DataTable("MostrarMecanico");
+            DataTable DtResultado = new DataTable("Mostrar_Mecanico");
             SqlConnection SqlCon = new SqlConnection();
             try
             {    // Cargando el conexión al servidor
@@ -187,7 +187,6 @@ namespace ProyectoFinalDeCurso.Data
                 SqlParameter ParIdCliente = new SqlParameter();
                 ParIdCliente.ParameterName = "@idMecanico";
                 ParIdCliente.SqlDbType = SqlDbType.Int;
-
                 ParIdCliente.Value = IdMecanico;
                 SqlCmd.Parameters.Add(ParIdCliente);
 
@@ -249,7 +248,7 @@ namespace ProyectoFinalDeCurso.Data
                 SqlCmd.Parameters.Add(ParCorreo);
 
                 SqlParameter ParSalario = new SqlParameter();
-                ParSalario.ParameterName = "salario";
+                ParSalario.ParameterName = "@salario";
                 ParSalario.SqlDbType = SqlDbType.Money;
                 ParSalario.Value = salario;
                 SqlCmd.Parameters.Add(ParSalario);

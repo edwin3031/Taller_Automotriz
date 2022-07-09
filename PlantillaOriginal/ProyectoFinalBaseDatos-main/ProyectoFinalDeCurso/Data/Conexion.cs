@@ -8,8 +8,8 @@ namespace ProyectoFinalDeCurso.Data
 {
     class Conexion
     {
-        public static string conexion = "Data Source=DESKTOP-78GVLJB\\SQLSERVER; " +
-                                         "Initial Catalog=Servicio_de_Mantenimiento; user=Jeison; password =Jeison.2020";
+        public static string conexion = "Data Source=LAPTOP-6891DS78; " +
+                                         "Initial Catalog=SERVIPLUS; user=AdminServiPlus; password =proyecto123";
     }
 }
     

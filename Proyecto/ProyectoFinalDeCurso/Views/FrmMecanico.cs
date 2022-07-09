@@ -123,7 +123,7 @@ namespace ProyectoFinalDeCurso.Views
                 }
                 else
                 {
-                    rpta = rpta = CMecanico.Actualizar_Mecanico(Convert.ToInt32(this.dtMecanico.CurrentRow.Cells["IdMecanico"].Value),
+                    rpta = rpta = CMecanico.Actualizar_Mecanico(Convert.ToInt32(this.dtMecanico.CurrentRow.Cells["ID Mecanico"].Value),
                        this.txtNombreMecanico.Text, this.txtNombreMecanico2.Text, this.txtApellidoMecanico.Text, this.txtApellidoMecanico2.Text, this.cmbEspecialidad.Text, this.txtDireccion.Text, txtCorreo.Text, this.txtTelefono.Text, Convert.ToDecimal(this.txtSalario.Text));
                    
 

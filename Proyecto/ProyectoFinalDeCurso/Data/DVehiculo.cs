@@ -20,7 +20,7 @@ namespace ProyectoFinalDeCurso.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Vehiculos";
+                SqlCmd.CommandText = "Mostrar_Vehiculo";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 
@@ -91,21 +91,21 @@ namespace ProyectoFinalDeCurso.Data
                 SqlCmd.Parameters.Add(nombre);
 
                 SqlParameter marcaV = new SqlParameter();
-                marcaV.ParameterName = "@Marca";
+                marcaV.ParameterName = "@marca";
                 marcaV.SqlDbType = SqlDbType.VarChar;
                 marcaV.Size = 20;
                 marcaV.Value = marca;
                 SqlCmd.Parameters.Add(marcaV);
 
                 SqlParameter modeloV = new SqlParameter();
-                modeloV.ParameterName = "@Modelo";
+                modeloV.ParameterName = "@modelo";
                 modeloV.SqlDbType = SqlDbType.VarChar;
                 modeloV.Size = 20;
                 modeloV.Value = modelo;
                 SqlCmd.Parameters.Add(modeloV);
 
                 SqlParameter añoV = new SqlParameter();
-                añoV.ParameterName = "@Año";
+                añoV.ParameterName = "aAño";
                 añoV.SqlDbType = SqlDbType.Int;
                 añoV.Value = año;
                 SqlCmd.Parameters.Add(añoV);
