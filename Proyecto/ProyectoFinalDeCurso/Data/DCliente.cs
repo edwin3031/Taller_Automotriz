@@ -11,7 +11,7 @@ namespace ProyectoFinalDeCurso.Data
     {
         public static DataTable Mostrar_Clientes()
         {
-            DataTable DtResultado = new DataTable("MostrarCliente");
+            DataTable DtResultado = new DataTable("Mostrar_Cliente");
             SqlConnection SqlCon = new SqlConnection();
             try
             {    // Cargando el conexión al servidor
@@ -19,7 +19,7 @@ namespace ProyectoFinalDeCurso.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Clientes";
+                SqlCmd.CommandText = "Mostrar_Cliente";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 
@@ -67,7 +67,7 @@ namespace ProyectoFinalDeCurso.Data
         }
 
         public static string Insertar_Cliente(string primerNombre, string segundoNombre, string primerApellido
-                                       , string segundoApellido, string direccion, string correo,string telefono)
+                                       , string segundoApellido, string direccion, string correo, string telefono)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -112,20 +112,6 @@ namespace ProyectoFinalDeCurso.Data
                 ParSegundoApellido.Value = segundoApellido;
                 SqlCmd.Parameters.Add(ParSegundoApellido);
 
-                SqlParameter ParDirección = new SqlParameter();
-                ParDirección.ParameterName = "@direccion";
-                ParDirección.SqlDbType = SqlDbType.VarChar;
-                ParDirección.Size = 100;
-                ParDirección.Value = direccion;
-                SqlCmd.Parameters.Add(ParDirección);
-
-
-                SqlParameter ParTelefono = new SqlParameter();
-                ParTelefono.ParameterName = "@telefono";
-                ParTelefono.SqlDbType = SqlDbType.VarChar;
-                ParTelefono.Size = 60;
-                ParTelefono.Value = telefono;
-                SqlCmd.Parameters.Add(ParTelefono);
 
                 SqlParameter ParCorreo = new SqlParameter();
                 ParCorreo.ParameterName = "@correo";
@@ -133,6 +119,20 @@ namespace ProyectoFinalDeCurso.Data
                 ParCorreo.Size = 60;
                 ParCorreo.Value = correo;
                 SqlCmd.Parameters.Add(ParCorreo);
+
+                SqlParameter ParDirección = new SqlParameter();
+                ParDirección.ParameterName = "@direccion";
+                ParDirección.SqlDbType = SqlDbType.VarChar;
+                ParDirección.Size = 100;
+                ParDirección.Value = direccion;
+                SqlCmd.Parameters.Add(ParDirección);
+
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@telefono";
+                ParTelefono.SqlDbType = SqlDbType.VarChar;
+                ParTelefono.Size = 60;
+                ParTelefono.Value = telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
 
 
                 //Ejecutamos nuestro comando
