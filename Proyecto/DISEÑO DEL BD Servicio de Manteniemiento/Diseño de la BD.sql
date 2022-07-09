@@ -16,7 +16,7 @@ create table Cliente
  Telefono varchar (40),
  Correo varchar (60),
  Direccion varchar (60),
- Estado varchar(50) null
+ Estado varchar(60) null
 )
 
 go
@@ -48,7 +48,7 @@ Create table Mantenimiento
 IDVehículo int not null,
 Fecha_Ingreso date not null,
 Fecha_Salida date not null,
-Estado varchar (50))
+Estado varchar (60))
 
 go
 
@@ -95,7 +95,7 @@ Create table Mecánico
  Telefono varchar (40),
  Correo varchar (60),
  Direccion varchar (60),
- Estado varchar(50)
+ Estado varchar(60)
 
  )
 
@@ -106,7 +106,7 @@ IdUsuario int primary key identity (1,1),
 Usuario varchar(50) not null,
 Contrasenia varchar(MAX) not null,
 Rol varchar(50),
-Estado varchar(50)
+Estado varchar(60)
 )
 
 go
