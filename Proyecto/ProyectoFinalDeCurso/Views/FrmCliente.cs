@@ -158,7 +158,7 @@ namespace ProyectoFinalDeCurso.Views
                     string rpta = "";
 
 
-                    rpta = CCliente.Actualizar_Estado(Convert.ToInt32(this.dtCliente.CurrentRow.Cells["IdCliente"].Value));
+                    rpta = CCliente.Actualizar_Estado(Convert.ToInt32(this.dtCliente.CurrentRow.Cells["ID Cliente"].Value));
 
                     if (rpta.Equals("OK"))
                     {
