@@ -107,8 +107,8 @@ namespace ProyectoFinalDeCurso.Views
         public void Mostrar()
         {
             this.dgvMantenimientos.DataSource = CMantenimiento.Mostrar_Mantenimiento();
-            this.dgvMantenimientos.Columns[0].Visible = false;
-            this.dgvMantenimientos.Columns[1].Visible = false;
+            //this.dgvMantenimientos.Columns[0].Visible = false;
+            //this.dgvMantenimientos.Columns[1].Visible = false;
         }
 
         public void ValidadAsignacionDeServicio()
@@ -314,8 +314,8 @@ namespace ProyectoFinalDeCurso.Views
         private void txtBuscarMantenimiento_TextChanged(object sender, EventArgs e)
         {
             this.dgvMantenimientos.DataSource = CMantenimiento.Buscar_Mantenimientos(this.txtBuscarMantenimiento.Text);
-            this.dgvMantenimientos.Columns[0].Visible = false;
-            this.dgvMantenimientos.Columns[1].Visible = false;
+            //this.dgvMantenimientos.Columns[0].Visible = false;
+            //this.dgvMantenimientos.Columns[1].Visible = false;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
