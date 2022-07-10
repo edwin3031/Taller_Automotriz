@@ -148,21 +148,21 @@ namespace ProyectoFinalDeCurso.Data
 
 
                 SqlParameter ParDescipcion = new SqlParameter();
-                ParDescipcion.ParameterName = "@descripcion";
+                ParDescipcion.ParameterName = "@Descripcion";
                 ParDescipcion.SqlDbType = SqlDbType.VarChar;
                 ParDescipcion.Size = 60;
                 ParDescipcion.Value = descripcion;
                 SqlCmd.Parameters.Add(ParDescipcion);
 
                 SqlParameter ParPrecio = new SqlParameter();
-                ParPrecio.ParameterName = "@precio";
+                ParPrecio.ParameterName = "@Precio";
                 ParPrecio.SqlDbType = SqlDbType.Money;
                 ParPrecio.Value = precio;
                 SqlCmd.Parameters.Add(ParPrecio);
 
 
                 SqlParameter ParTipo = new SqlParameter();
-                ParTipo.ParameterName = "@tipo";
+                ParTipo.ParameterName = "@Tipo";
                 ParTipo.SqlDbType = SqlDbType.VarChar;
                 ParDescipcion.Size = 20;
                 ParTipo.Value = tipo;

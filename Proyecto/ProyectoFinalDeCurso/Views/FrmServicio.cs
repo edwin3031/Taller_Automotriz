@@ -126,7 +126,7 @@ namespace ProyectoFinalDeCurso.Views
 
                 if (this.IsNuevo)
                 {
-                    rpta = CServicio.Insertar_Servicio(this.txtDescripcion.Text,Convert.ToDecimal( this.txtPrecio), this.cmbTipo.Text);
+                    rpta = CServicio.Insertar_Servicio(this.txtDescripcion.Text,Convert.ToDecimal(this.txtPrecio.Text), this.cmbTipo.Text);
 
                 }
                 else
