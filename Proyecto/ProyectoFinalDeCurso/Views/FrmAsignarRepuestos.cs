@@ -38,8 +38,8 @@ namespace ProyectoFinalDeCurso.Views
         private void Mostrar()
         {
             dgvMantenimientos.DataSource = CAsignarRepuesto.Mostrar_Mantenimiento_Mecanico();
-            this.dgvMantenimientos.Columns[0].Visible = false;
-            this.dgvMantenimientos.Columns[1].Visible = false;
+            //this.dgvMantenimientos.Columns[0].Visible = false;
+            //this.dgvMantenimientos.Columns[1].Visible = false;
             //dgvRepuestos.DataSource = CAsignarRepuesto.Mostrar_Servicios_Repuestos(idDetalleMantenimiento);
             
         }
