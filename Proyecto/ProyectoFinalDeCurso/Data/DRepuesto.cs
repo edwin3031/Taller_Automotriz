@@ -20,7 +20,7 @@ namespace ProyectoFinalDeCurso.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Repuestos";
+                SqlCmd.CommandText = "Mostrar_Repuesto";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
 

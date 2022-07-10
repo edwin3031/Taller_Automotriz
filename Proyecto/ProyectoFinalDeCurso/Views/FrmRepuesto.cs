@@ -24,13 +24,13 @@ namespace ProyectoFinalDeCurso.Views
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             this.dtRepuesto.DataSource = CRepuesto.Buscar_Repuesto(this.txtFiltro.Text);
-            this.dtRepuesto.Columns[0].Visible = false;
+            //this.dtRepuesto.Columns[0].Visible = false;
         }
 
         public void Mostrar()
         {
             this.dtRepuesto.DataSource = CRepuesto.Mostrar_Repuesto();
-             this.dtRepuesto.Columns[0].Visible = false;
+             //this.dtRepuesto.Columns[0].Visible = false;
 
         }
 
