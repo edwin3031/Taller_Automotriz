@@ -138,7 +138,7 @@ namespace ProyectoFinalDeCurso.Views
             this.txtMarca.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Marca"].Value);
             this.txtModelo.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Modelo"].Value);
             this.txtCantidad.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Cantidad"].Value);
-            this.txtDescripcion.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Descripcion"].Value);
+            this.txtDescripcion.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Descripción"].Value);
             this.txtPrecio.Text = Convert.ToString(this.dtRepuesto.CurrentRow.Cells["Precio"].Value);
         }
 
@@ -155,7 +155,7 @@ namespace ProyectoFinalDeCurso.Views
                 }
                 else
                 {
-                    rpta = CRepuesto.Actualizar_Repuesto(Convert.ToInt32(this.dtRepuesto.CurrentRow.Cells["IdRepuesto"].Value),
+                    rpta = CRepuesto.Actualizar_Repuesto(Convert.ToInt32(this.dtRepuesto.CurrentRow.Cells["ID Repuesto"].Value),
                         this.txtMarca.Text, this.txtModelo.Text, Convert.ToInt32(this.txtCantidad.Text), this.txtDescripcion.Text, Convert.ToDecimal(this.txtPrecio.Text));
 
                 }

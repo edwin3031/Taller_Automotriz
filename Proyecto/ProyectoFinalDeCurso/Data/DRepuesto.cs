@@ -165,14 +165,14 @@ namespace ProyectoFinalDeCurso.Data
 
 
                 SqlParameter ParMarca = new SqlParameter();
-                ParMarca.ParameterName = "@marca";
+                ParMarca.ParameterName = "@Marca";
                 ParMarca.SqlDbType = SqlDbType.VarChar;
                 ParMarca.Size = 60;
                 ParMarca.Value = marca;
                 SqlCmd.Parameters.Add(ParMarca);
 
                 SqlParameter ParModelo = new SqlParameter();
-                ParModelo.ParameterName = "@modelo";
+                ParModelo.ParameterName = "@Modelo";
                 ParModelo.SqlDbType = SqlDbType.VarChar;
                 ParModelo.Size = 60;
                 ParModelo.Value = modelo;
@@ -180,7 +180,7 @@ namespace ProyectoFinalDeCurso.Data
 
 
                 SqlParameter ParCantidad = new SqlParameter();
-                ParCantidad.ParameterName = "@cantidad";
+                ParCantidad.ParameterName = "@Cantidad";
                 ParCantidad.SqlDbType = SqlDbType.Int;
 
                 ParCantidad.Value = cantidad;
@@ -188,14 +188,14 @@ namespace ProyectoFinalDeCurso.Data
 
 
                 SqlParameter ParDescripcion = new SqlParameter();
-                ParDescripcion.ParameterName = "@descripcion";
+                ParDescripcion.ParameterName = "@Descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
                 ParDescripcion.Size = 60;
                 ParDescripcion.Value = descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
 
                 SqlParameter ParPrecio = new SqlParameter();
-                ParPrecio.ParameterName = "@precio";
+                ParPrecio.ParameterName = "@Precio";
                 ParPrecio.SqlDbType = SqlDbType.Money;
                 ParPrecio.Value = precio;
                 SqlCmd.Parameters.Add(ParPrecio);

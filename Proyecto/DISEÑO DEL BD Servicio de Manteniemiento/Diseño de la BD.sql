@@ -69,7 +69,7 @@ Marca varchar(50) not null,
 Modelo varchar (50)not null,
 Descripcion varchar (60) not null ,
 Cantidad int,
-Precio float,
+Precio decimal,
 )
 
 go
