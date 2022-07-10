@@ -57,7 +57,7 @@ namespace ProyectoFinalDeCurso.Views
         public void Mostrar()
         {
             this.dtCliente.DataSource = CUsuario.Mostrar_Usuarios();
-            this.dtCliente.Columns[0].Visible = false;
+            //this.dtCliente.Columns[0].Visible = false;
            
 
         }
