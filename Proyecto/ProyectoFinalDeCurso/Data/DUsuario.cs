@@ -144,12 +144,12 @@ namespace ProyectoFinalDeCurso.Data
                 SqlCmd.Parameters.Add(ParPrimerApellido);
 
 
-                SqlParameter ParEspecialidad = new SqlParameter();
+               /* SqlParameter ParEspecialidad = new SqlParameter();
                 ParEspecialidad.ParameterName = "@Especialidad";
                 ParEspecialidad.SqlDbType = SqlDbType.VarChar;
                 ParEspecialidad.Size = 100;
                 ParEspecialidad.Value = especialidad;
-                SqlCmd.Parameters.Add(ParEspecialidad);
+                SqlCmd.Parameters.Add(ParEspecialidad);*/
 
 
                 SqlParameter ParTelefono = new SqlParameter();
