@@ -97,3 +97,129 @@ BEGIN
 END
 
 -- EXEC Factura_Header 1
+
+
+go
+
+-- Stored Procedures original backup
+
+create PROCEDURE [dbo].[Recaudacion_Servicio]
+@Año int, @Mes int
+AS
+IF exists (
+           SELECT 
+           Fecha_Salida
+           FROM Mantenimiento
+           WHERE YEAR(Fecha_Salida) = @Año and MONTH(Fecha_Salida) = @Mes
+           )
+SELECT
+s.IdServicio as IdServicio,
+s.Descripción as Servicio,
+s.Tipo_Mantenimiento as [Tipo de Mantenimiento],
+COUNT(dm.IdServicio) as [Aplicaciones],
+ROUND(SUM(dm.Precio),2) as [Total del servicio],
+ROUND((SUM(dm.Precio) / 
+                      (SELECT 
+                      SUM(dm2.Precio) as TotalServicio
+                      FROM Mantenimiento m2
+                      inner join Detalle_Mantenimiento dm2
+                      on m2.IdMantenimiento = dm2.IdMantenimiento
+                      WHERE YEAR(m2.Fecha_Salida) = @Año and MONTH(m2.Fecha_Salida) = @Mes)) * 100
+  ,2) as [% Total]FROM Detalle_Mantenimiento dm
+inner join Servicio s
+on dm.IdServicio = s.IdServicio
+inner join Mantenimiento m
+on dm.IdMantenimiento = m.IdMantenimiento
+WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Facturado'
+GROUP BY dm.IdMantenimiento, s.IdServicio, s.Descripción, s.Tipo_Mantenimiento
+
+ELSE
+BEGIN
+   IF not exists (
+           SELECT 
+           Fecha_Salida
+           FROM Mantenimiento
+           WHERE YEAR(Fecha_Salida) = @Año 
+           )
+	BEGIN
+	SELECT 'Año no encontrado' as Mensaje
+	END
+	ELSE
+	BEGIN
+	SELECT 'Mes no encontrado' as Mensaje
+	END
+END
+
+/*select * from Detalle_Repuesto
+select * from repuesto
+select * from Mantenimiento
+select * from Detalle_Mantenimiento*/
+GO
+	create procedure [dbo].[Recaudacion_Repuesto]
+	@Año int, @Mes int
+	as
+	declare @total decimal
+	set @total=(select sum((drs.Cantidad * rs.Precio)) from Detalle_Repuesto drs
+	inner join Repuesto rs on rs.IdRepuesto = drs.IdRepuesto
+	inner join Detalle_Mantenimiento dms on 
+	dms.IdDetalle_Mantenimiento=drs.IdDetalle_Mantenimiento
+	inner join Mantenimiento ms on 
+	ms.IdMantenimiento=dms.IdMantenimiento
+	where 
+	ms.Estado = 'Facturado' and YEAR(ms.Fecha_Salida) = @Año and MONTH(ms.Fecha_Salida) = @Mes
+	)
+
+	select 
+	r.Descripcion ,
+	r.Marca,
+	r.Modelo,
+	Count( dr.IdRepuesto)Aplicaciones,
+	sum(dr.Cantidad * r.Precio) Recaudacion,
+
+	cast( round (sum( ((dr.Cantidad * r.Precio) * 100)/@total),2) as varchar)+'%' as Porcentaje
+
+	from Detalle_Repuesto dr 
+
+	inner join Detalle_Mantenimiento dm on 
+	dm.IdDetalle_Mantenimiento=dr.IdDetalle_Mantenimiento
+	inner join Mantenimiento m on 
+	m.IdMantenimiento=dm.IdMantenimiento
+	inner join Repuesto r 
+	on dr.IdRepuesto=r.IdRepuesto
+	where 
+	m.Estado = 'Facturado' and YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes
+	group by  r.Descripcion,r.Marca,r.Modelo
+
+GO
+
+create PROCEDURE [dbo].[Recaudacion_Mantenimientos]
+@Año int, @Mes int
+AS
+IF exists (
+           SELECT 
+           Fecha_Salida
+           FROM Mantenimiento
+           WHERE YEAR(Fecha_Salida) = @Año and MONTH(Fecha_Salida) = @Mes
+           )
+			SELECT 
+			v.Marca as Marca,
+			v.Modelo as Modelo,
+			m.Fecha_Ingreso,
+			m.Fecha_Salida,
+			count(dm.IdServicio) as Servicio,
+			isnull(SUM(dr.Cantidad),0) as Repuestos,
+			isnull( SUM( dr.Cantidad * r.Precio) + SUM(dm.Precio) , SUM(dm.Precio))as TOTAL
+			FROM Detalle_Repuesto dr
+			inner join Repuesto r
+			on dr.IdRepuesto = r.IdRepuesto
+			inner join  Detalle_Mantenimiento dm
+			on dr.IdDetalle_Mantenimiento = dm.IdDetalle_Mantenimiento
+			inner join Mantenimiento m
+			on dm.IdMantenimiento = m.IdMantenimiento
+			inner join Vehículo v
+			on m.IdVehículo = v.IdVehículo
+			WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Facturado'
+			GROUP BY dm.IdMantenimiento,v.Marca,v.Modelo,m.Fecha_Ingreso,m.Fecha_Salida --, dm.IdDetalleMantenimiento
+
+ELSE
+		SELECT 'Mes no encontrado'
