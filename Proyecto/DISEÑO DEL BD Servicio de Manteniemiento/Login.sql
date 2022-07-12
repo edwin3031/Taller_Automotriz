@@ -23,3 +23,10 @@ sp_adduser AdminMantenimiento, AdminMantenimiento
 
 -- Para saber el nombre del servidor
 --Select @@SERVERNAME
+
+go
+
+
+	/*Creedenciales para login:
+	Usuario: uni1
+	Contraseña: 2022*/
