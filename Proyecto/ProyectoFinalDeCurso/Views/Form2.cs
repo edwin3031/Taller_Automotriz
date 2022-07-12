@@ -151,6 +151,8 @@ namespace ProyectoFinalDeCurso.Views
             this.pnlSubMenuSeguridad.Visible = false;
             this.flReportesSubmenu.Visible = false;
 
+            
+
 
            
 
@@ -265,6 +267,8 @@ namespace ProyectoFinalDeCurso.Views
             if (pnlSubMenuOperaciones.Visible == false)
             {
                 pnlSubMenuOperaciones.Visible = true;
+                //Botones que no funcionan
+                this.btnAsignarRepiuesto.Visible = false;
             }
             else
             {
@@ -291,6 +295,10 @@ namespace ProyectoFinalDeCurso.Views
             if (flReportesSubmenu.Visible == false)
             {
                 flReportesSubmenu.Visible = true;
+
+                //Botones que no funcionan
+                this.btnRecaudacionRepuesto.Visible = false;
+                this.btnRecaudacionServicio.Visible = false;
             }
             else
             {
@@ -353,7 +361,7 @@ namespace ProyectoFinalDeCurso.Views
         private void btnReporteRecaudacionMantenimiento_Click(object sender, EventArgs e)
         {
 
-            AbrirHijo(new FrmRecaudacionMantenimiento());
+            AbrirHijo(new FrmReportMantenimiento());
         }
 
         private void btnRecaudacionRepuesto_Click(object sender, EventArgs e)

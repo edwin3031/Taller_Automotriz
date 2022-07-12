@@ -54,5 +54,16 @@ namespace ProyectoFinalDeCurso.Properties {
                 return ((string)(this["Servicio_de_MantenimientoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-6891DS78;Initial Catalog=Servicios_de_mantenimiento;Persist Se" +
+            "curity Info=True;User ID=AdminMantenimiento;Password=proyecto123")]
+        public string Servicios_de_mantenimientoConnectionString1 {
+            get {
+                return ((string)(this["Servicios_de_mantenimientoConnectionString1"]));
+            }
+        }
     }
 }

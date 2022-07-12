@@ -119,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSServicioMantenimiento.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\DSTMantenimientoxsd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTMantenimientoxsd.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FrmRecaudacionMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +141,12 @@
     </Compile>
     <Compile Include="Reportes\FrmRecaudacionServicio.Designer.cs">
       <DependentUpon>FrmRecaudacionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReportMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportMantenimiento.Designer.cs">
+      <DependentUpon>FrmReportMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Program.cs" />
@@ -245,7 +256,11 @@
     <EmbeddedResource Include="Reportes\FrmRecaudacionServicio.resx">
       <DependentUpon>FrmRecaudacionServicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReportMantenimiento.resx">
+      <DependentUpon>FrmReportMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Recaudacion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportMantenimiento.rdlc" />
     <EmbeddedResource Include="Reportes\ReportMantenimientos.rdlc" />
     <EmbeddedResource Include="Reportes\Repuesto.rdlc" />
     <EmbeddedResource Include="Reportes\Servicio.rdlc" />
@@ -343,6 +358,17 @@
     </None>
     <None Include="Reportes\DSServicioMantenimiento.xss">
       <DependentUpon>DSServicioMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSTMantenimientoxsd.xsc">
+      <DependentUpon>DSTMantenimientoxsd.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DSTMantenimientoxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTMantenimientoxsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DSTMantenimientoxsd.xss">
+      <DependentUpon>DSTMantenimientoxsd.xsd</DependentUpon>
     </None>
     <None Include="Resources\user_icon-icons.com_57997.png" />
   </ItemGroup>
