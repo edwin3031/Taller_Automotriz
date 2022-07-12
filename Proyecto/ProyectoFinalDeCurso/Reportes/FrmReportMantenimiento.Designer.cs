@@ -31,18 +31,28 @@ namespace ProyectoFinalDeCurso.Reportes
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.Recaudacion_MantenimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DSTMantenimientoxsd = new ProyectoFinalDeCurso.Reportes.DSTMantenimientoxsd();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.aiolbl = new System.Windows.Forms.Label();
             this.aniotxt = new System.Windows.Forms.TextBox();
             this.meslbl = new System.Windows.Forms.Label();
             this.mestxt = new System.Windows.Forms.TextBox();
             this.calcularbtn = new System.Windows.Forms.Button();
-            this.Recaudacion_MantenimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DSTMantenimientoxsd = new ProyectoFinalDeCurso.Reportes.DSTMantenimientoxsd();
             this.Recaudacion_MantenimientosTableAdapter = new ProyectoFinalDeCurso.Reportes.DSTMantenimientoxsdTableAdapters.Recaudacion_MantenimientosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Recaudacion_MantenimientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DSTMantenimientoxsd)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Recaudacion_MantenimientosBindingSource
+            // 
+            this.Recaudacion_MantenimientosBindingSource.DataMember = "Recaudacion_Mantenimientos";
+            this.Recaudacion_MantenimientosBindingSource.DataSource = this.DSTMantenimientoxsd;
+            // 
+            // DSTMantenimientoxsd
+            // 
+            this.DSTMantenimientoxsd.DataSetName = "DSTMantenimientoxsd";
+            this.DSTMantenimientoxsd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -91,23 +101,13 @@ namespace ProyectoFinalDeCurso.Reportes
             // 
             // calcularbtn
             // 
-            this.calcularbtn.Location = new System.Drawing.Point(646, 37);
+            this.calcularbtn.Location = new System.Drawing.Point(610, 43);
             this.calcularbtn.Name = "calcularbtn";
-            this.calcularbtn.Size = new System.Drawing.Size(75, 23);
+            this.calcularbtn.Size = new System.Drawing.Size(116, 28);
             this.calcularbtn.TabIndex = 5;
             this.calcularbtn.Text = "Calcular";
             this.calcularbtn.UseVisualStyleBackColor = true;
             this.calcularbtn.Click += new System.EventHandler(this.calcularbtn_Click);
-            // 
-            // Recaudacion_MantenimientosBindingSource
-            // 
-            this.Recaudacion_MantenimientosBindingSource.DataMember = "Recaudacion_Mantenimientos";
-            this.Recaudacion_MantenimientosBindingSource.DataSource = this.DSTMantenimientoxsd;
-            // 
-            // DSTMantenimientoxsd
-            // 
-            this.DSTMantenimientoxsd.DataSetName = "DSTMantenimientoxsd";
-            this.DSTMantenimientoxsd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Recaudacion_MantenimientosTableAdapter
             // 
