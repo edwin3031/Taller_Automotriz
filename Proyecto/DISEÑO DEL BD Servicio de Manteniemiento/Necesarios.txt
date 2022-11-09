@@ -1,1 +1,3 @@
-Microsoft visual basic packs 12
+Instalación: 
+- Microsoft visual basic packs 12
+- SQL Server Integration Services Projects
