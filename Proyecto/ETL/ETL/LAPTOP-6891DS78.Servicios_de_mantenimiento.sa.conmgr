@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LAPTOP-6891DS78.Servicios_de_mantenimiento.sa"
+  DTS:DTSID="{D424442F-43FB-4FB4-9161-3DFAD12A4E43}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=LAPTOP-6891DS78;User ID=sa;Initial Catalog=Servicios_de_mantenimiento;Provider=SQLNCLI11.1;Application Name=SSIS-ETL-{D424442F-43FB-4FB4-9161-3DFAD12A4E43}LAPTOP-6891DS78.Servicios_de_mantenimiento.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjyDChTy+w0ixnzThkNVHFAAAAAACAAAAAAAQZgAAAAEAACAAAAD+fWLyyzEd+/seLdSfHMZJdfbsIoKSG1h64MYLW6HNDwAAAAAOgAAAAAIAACAAAAA2h8Q/wf3UzkPz+ri3j4psBIcKkqH4dI9cx4D83Od/1IAAAACFnBGRLXYDqFZvsEt4dPz7FJaKAxCAmSRw6id9g6wL4XmE90B67FItM93c2QKunuWE7Ccjgwb9saJtQZ7uQfgPttyERftxVJoJH3KL8fKK1eCv16loxhVzqKuFLZ6O/CbgXs7I5+8DVImrfP6D/bn6ug3akpolVvFQmfVP/qe1AEAAAABgxZHm6iC2D1TfzuDXxRPG3eE/oJWayKbAHmW7Eeambs6WBGPN/L/u5LoA1v7JimYVBYMwYkPNAlnllHdkz3rP</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
