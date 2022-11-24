@@ -1,0 +1,13 @@
+Cosas para ETL:
+
+Slowly Changing Dimension:
+[FECHAINICIO] IS NOT NULL AND [FECHAFINAL] ='9999-12-31'
+
+Derived Column:                       (DT_DBDATE)Getdate()
+
+OLE DB Command:  = '9999-12-31'
+
+Derived Column 1:
+FechaInicio (DT_DBDATE)GETDATE()
+FechaFinal  (DT_DBDATE)"31-12-9999"
+
