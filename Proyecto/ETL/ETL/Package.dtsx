@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{5EED3436-24B2-4E20-A190-17B9C1A09430}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{60EE8F73-CC19-405B-B0BC-860DAFE230DC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1482,7 +1482,450 @@
             </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga de Dimensiones\Dimensión Fechas"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{937373A5-ED57-4907-B4F1-86BA3FA3E4E5}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dimensión Fechas"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[DimFechas]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{0615B009-916C-4C62-96DC-F407B4475E14}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LAPTOP-6891DS78.DimSerMantenimiento.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IdFecha]"
+                          cachedDataType="dbDate"
+                          cachedName="IdFecha"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDFecha]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[IdFecha]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Año]"
+                          cachedDataType="i4"
+                          cachedName="Año"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Año]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[noMes]"
+                          cachedDataType="i4"
+                          cachedName="noMes"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NoMes]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[noMes]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dia]"
+                          cachedDataType="i4"
+                          cachedName="Dia"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dia]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dia]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NombreDia]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="NombreDia"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreDia]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreDia]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NombreMes]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="NombreMes"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreMes]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreMes]" />
+                        <inputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Trimestre]"
+                          cachedDataType="i4"
+                          cachedName="Trimestre"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Trimestre]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DimFechaID]"
+                          dataType="i4"
+                          name="DimFechaID" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDFecha]"
+                          dataType="dbDate"
+                          name="IDFecha" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Año]"
+                          dataType="i4"
+                          name="Año" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NoMes]"
+                          dataType="i4"
+                          name="NoMes" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreMes]"
+                          dataType="wstr"
+                          length="50"
+                          name="NombreMes" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dia]"
+                          dataType="i4"
+                          name="Dia" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreDia]"
+                          dataType="wstr"
+                          length="50"
+                          name="NombreDia" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Trimestre]"
+                          dataType="i4"
+                          name="Trimestre" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Select distinct Fecha_Ingreso as IdFecha,
+				YEAR(Fecha_Ingreso) as Año,
+				MONTH(Fecha_Ingreso) as noMes,
+				DAY(Fecha_Ingreso) as Dia,
+				DATENAME(WEEKDAY, Fecha_Ingreso) as NombreDia,
+				DATENAME(MONTH, Fecha_Ingreso) as NombreMes,
+				DATEPART(QQ, Fecha_Ingreso) as Trimestre
+			from Servicios_de_mantenimiento.dbo.Mantenimiento</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="{D424442F-43FB-4FB4-9161-3DFAD12A4E43}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LAPTOP-6891DS78.Servicios_de_mantenimiento.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[IdFecha]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IdFecha]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[IdFecha]"
+                          name="IdFecha"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Año]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Año]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Año]"
+                          name="Año"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[noMes]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[noMes]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[noMes]"
+                          name="noMes"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dia]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Dia]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dia]"
+                          name="Dia"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreDia]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreDia]"
+                          length="30"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreDia]"
+                          name="NombreDia"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreMes]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreMes]"
+                          length="30"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreMes]"
+                          name="NombreMes"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Trimestre]"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].Columns[Trimestre]"
+                          name="Trimestre"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IdFecha]"
+                          dataType="dbDate"
+                          name="IdFecha" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Año]"
+                          dataType="i4"
+                          name="Año" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[noMes]"
+                          dataType="i4"
+                          name="noMes" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Dia]"
+                          dataType="i4"
+                          name="Dia" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreDia]"
+                          dataType="wstr"
+                          length="30"
+                          name="NombreDia" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreMes]"
+                          dataType="wstr"
+                          length="30"
+                          name="NombreMes" />
+                        <externalMetadataColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Trimestre]"
+                          dataType="i4"
+                          name="Trimestre" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IdFecha]"
+                          dataType="dbDate"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IdFecha]"
+                          name="IdFecha" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Año]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Año]"
+                          name="Año" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[noMes]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[noMes]"
+                          name="noMes" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Dia]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Dia]"
+                          name="Dia" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreDia]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreDia]"
+                          name="NombreDia" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreMes]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreMes]"
+                          name="NombreMes" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Trimestre]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Trimestre]"
+                          name="Trimestre" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Carga de Dimensiones\Dimensión Fechas.Paths[OLE DB Source Output]"
+                  endId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Carga de Dimensiones.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{24D7BED5-DEB0-4991-82FE-601F962D89CA}"
+          DTS:From="Package\Carga de Dimensiones\Dimension Cliente"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Carga de Dimensiones\Dimensión Fechas" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Proceso de Inicio"
@@ -1494,6 +1937,22 @@
       DTS:ObjectName="Proceso de Inicio">
       <DTS:Variables />
       <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Proceso de Inicio\ETL Dim Fechas"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{6A1C5FE0-E34D-4AAF-B0BA-F38511E16E58}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ETL Dim Fechas"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{0615B009-916C-4C62-96DC-F407B4475E14}"
+              SQLTask:SqlStatementSource="EXEC sp_msforeachtable&#xA;'BEGIN TRY&#xA;TRUNCATE TABLE DimFechas&#xA;END TRY&#xA;BEGIN CATCH&#xA;DELETE FROM DimFechas&#xA;END CATCH '&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Proceso de Inicio\Tarea Ejecutar SQL"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -1511,6 +1970,16 @@
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Proceso de Inicio.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{7A9453D6-3D44-4C38-8213-1BDAB7438B4C}"
+          DTS:From="Package\Proceso de Inicio\Tarea Ejecutar SQL"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Proceso de Inicio\ETL Dim Fechas" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -1534,55 +2003,95 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Proceso de Inicio\Tarea Ejecutar SQL"
-          TopLeft="33.2999899665519,25.2000011984507" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="232,122.4"
-          Size="232,165.6"
-          Id="Package\Proceso de Inicio"
-          TopLeft="219.166657957766,82.3333339876599" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Carga de Dimensiones\Dimension Cliente"
           TopLeft="48.7333222733608,19.1333359713025" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="252,116"
-          Size="252,159.2"
-          Id="Package\Carga de Dimensiones"
-          TopLeft="229.999990860622,292.933335661358" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Carga de Dimensiones\Dimensión Fechas"
+          TopLeft="52.1999886751179,101.60000281016" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="335.166657957766,247.93333398766">
+          Id="Package\Carga de Dimensiones.PrecedenceConstraints[Constraint]"
+          TopLeft="132.466655474239,60.7333359713025">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.8333329028554,45.0000016736985"
+              EndConnector="0,40.8666668388575"
               Start="0,0"
-              End="20.8333329028554,37.5000016736985">
+              End="0,33.3666668388575">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5000008368493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5000008368493"
-                    Point2="0,22.5000008368493"
-                    Point3="4,22.5000008368493" />
+                    End="0,33.3666668388575" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="252,198.4"
+          Size="252,241.6"
+          Id="Package\Carga de Dimensiones"
+          TopLeft="232.499990761281,401.600002975464" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Proceso de Inicio\ETL Dim Fechas"
+          TopLeft="52.4666558716038,111.200001653036" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Proceso de Inicio\Tarea Ejecutar SQL"
+          TopLeft="42.466656268968,25.2000011984507" />
+        <EdgeLayout
+          Id="Package\Proceso de Inicio.PrecedenceConstraints[Constraint]"
+          TopLeft="129.066656070286,66.8000011984507">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.4000004545849"
+              Start="0,0"
+              End="0,36.9000004545849">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="16.8333329028554,22.5000008368493" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.8333329028554,22.5000008368493"
-                    Point2="20.8333329028554,22.5000008368493"
-                    Point3="20.8333329028554,26.5000008368493" />
+                    End="0,36.9000004545849" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="264,208"
+          Size="264,251.2"
+          Id="Package\Proceso de Inicio"
+          TopLeft="219.166657957766,82.3333339876599" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="354.833324359523,333.53333398766">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.0666689878036"
+              Start="0,0"
+              End="0,60.5666689878036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="20.8333329028554,37.5000016736985" />
+                    End="0,60.5666689878036" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1837,19 +2346,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga de Dimensiones\Dimension Cliente\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Carga de Dimensiones\Dimension Cliente\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -1938,7 +2434,79 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Carga de Dimensiones\Dimension Cliente\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Carga de Dimensiones\Dimension Cliente\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Carga de Dimensiones\Dimensión Fechas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source"
+          TopLeft="356.666652494007,45.0666670248244" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination"
+          TopLeft="349.99998609225,149.066667851342" />
+        <EdgeLayout
+          Id="Package\Carga de Dimensiones\Dimensión Fechas.Paths[OLE DB Source Output]"
+          TopLeft="434.133319293129,86.6666670248244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.4000008265177"
+              Start="0,0"
+              End="0,54.9000008265177">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.9000008265177" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga de Dimensiones\Dimensión Fechas\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
