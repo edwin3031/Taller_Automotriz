@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{22623427-EF13-4108-A9E3-4A15D63584D5}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{E0B2F6C0-0E47-4168-88FA-A87ED17C2423}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6998,6 +6998,34 @@
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Carga de tabla Fact"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenedor de secuencias"
+      DTS:DTSID="{63A8D982-AA9F-4C30-A785-8D22F619DF8E}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga de tabla Fact">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga de tabla Fact\Tarea Ejecutar SQL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{856F9C72-BD08-4D0C-87EA-B815ED0C58DC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Ejecutar SQL"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{0615B009-916C-4C62-96DC-F407B4475E14}"
+              SQLTask:SqlStatementSource="Merge dbo.HechosMantenimientos Destino&#xA;Using&#xA;&#xA;(Select &#xA;df.DimFechaID as DimFechaID,&#xA;dc.DimIdCliente as DimClienteID,&#xA;dv.DimIdVehículo as DimVehiculoID,&#xA;ds.DimIdServicio as DimServicioID,&#xA;dme.DimIdMecánico as DimMecanicoID,&#xA;dr.DimIdRepuesto as DimRepuestoID,&#xA;sdm.Precio as Precio&#xA;from Servicios_de_mantenimiento.dbo.Mantenimiento sma&#xA;inner join Servicios_de_mantenimiento.dbo.Detalle_Mantenimiento sdm&#xA;on sdm.IdMantenimiento = sma.IdMantenimiento&#xA;inner join Servicios_de_mantenimiento.dbo.Detalle_Repuesto sdr&#xA;on sdr.IdDetalle_Mantenimiento = sdm.IdDetalle_Mantenimiento&#xA;inner join  DimFechas df&#xA;on df.IDFecha = sma.Fecha_Ingreso&#xA;inner join DimVehículo dv&#xA;on dv.IdVehículo = sma.IdVehículo&#xA;inner join DimCliente dc&#xA;on dc.IdCliente = dv.IdCliente&#xA;inner join DimMecánico dme&#xA;on dme.IdMecánico = sdm.IdMecánico&#xA;inner join DimServicio ds&#xA;on ds.IdServicio = sdm.IdServicio&#xA;inner join DimRepuesto dr&#xA;on dr.IdRepuesto = sdr.IdRepuesto&#xA;where dc.FechaFinal='9999/12/31' AND &#xA;&#x9;  dv.FechaFinal='9999/12/31' AND &#xA;&#x9;  ds.FechaFinal='9999/12/31' AND &#xA;&#x9;  dme.FechaFinal='9999/12/31' AND &#xA;&#x9;  dr.FechaFinal='9999/12/31'&#xA;&#xA;group by&#xA;df.DimFechaID,&#xA;dc.DimIdCliente,&#xA;dv.DimIdVehículo,&#xA;ds.DimIdServicio,&#xA;dme.DimIdMecánico,&#xA;dr.DimIdRepuesto,&#xA;sdm.Precio) Origen&#xA;on&#xA;Destino.DimIdCliente = Origen.DimClienteID and&#xA;Destino.DimIdVehículo = Origen.DimVehiculoID and&#xA;Destino.DimIdServicio = Origen.DimServicioID and&#xA;Destino.DimIdMecánico = Origen.DimMecanicoID and&#xA;Destino.DimIdRepuesto = Origen.DimRepuestoID and&#xA;Destino.DimFechaID = Origen.DimFechaID&#xA;when matched and (Destino.Precio &lt;&gt; Origen.Precio)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;then &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;update set&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Destino.Precio = Origen.Precio&#xA;when not matched then&#xA;&#x9;&#x9;&#x9;insert (DimIdCliente, DimIdServicio, DimFechaID, DimIdMecánico, DimIdVehículo,&#xA;&#x9;&#x9;&#x9;DimIdRepuesto, Precio)&#xA;&#x9;&#x9;&#x9;values&#xA;&#x9;&#x9;&#x9;(Origen.DimClienteID, Origen.DimServicioID, Origen.DimFechaID, Origen.DimMecanicoID,&#xA;&#x9;&#x9;&#x9;Origen.DimVehiculoID, Origen.DimRepuestoID, Origen.Precio);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Proceso de Inicio"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contenedor de secuencias"
@@ -7051,6 +7079,34 @@
           DTS:To="Package\Proceso de Inicio\ETL Dim Fechas" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Proceso Final"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenedor de secuencias"
+      DTS:DTSID="{F2CC9CC7-A1FC-4ABD-A067-500304D44E15}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Proceso Final">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Proceso Final\Tarea Ejecutar SQL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{52F1DF08-5F36-46D4-840E-39F4B2497640}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Tarea Ejecutar SQL"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{0615B009-916C-4C62-96DC-F407B4475E14}"
+              SQLTask:SqlStatementSource="EXEC sp_msforeachtable 'ALTER TABLE ?CHECK CONSTRAINT ALL'&#xA;GO&#xA;EXEC sp_msforeachtable 'ALTER TABLE ?ENABLE TRIGGER ALL'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -7061,6 +7117,22 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Carga de Dimensiones" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{2A2E7854-C2C8-4FC7-9906-747C64E6EB4F}"
+      DTS:From="Package\Carga de Dimensiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Carga de tabla Fact" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{C20A84E0-F76F-459F-914F-0571C1AF4A9F}"
+      DTS:From="Package\Carga de tabla Fact"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Proceso Final" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -7278,6 +7350,84 @@
                     Point3="33.733332803515,38.0333344939021" />
                   <mssgle:LineSegment
                     End="33.733332803515,60.5666689878041" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Carga de tabla Fact\Tarea Ejecutar SQL"
+          TopLeft="34.8666367981182,26.1333359506397" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="252.8,122.4"
+          Size="252.8,165.6"
+          Id="Package\Carga de tabla Fact"
+          TopLeft="716.666638188893,456.800002066294" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="537.299990761281,683.200002975464">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.366647427612,-143.60000090917"
+              Start="0,0"
+              End="171.866647427612,-143.60000090917">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.683323713806,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85.683323713806,0"
+                    Point2="89.683323713806,0"
+                    Point3="89.683323713806,-4" />
+                  <mssgle:LineSegment
+                    End="89.683323713806,-139.60000090917" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.683323713806,-139.60000090917"
+                    Point2="89.683323713806,-143.60000090917"
+                    Point3="93.683323713806,-143.60000090917" />
+                  <mssgle:LineSegment
+                    End="171.866647427612,-143.60000090917" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Proceso Final\Tarea Ejecutar SQL"
+          TopLeft="47.4666362020719,35.0666696283554" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="260.8,134.4"
+          Size="260.8,177.6"
+          Id="Package\Proceso Final"
+          TopLeft="717.699972085159,686.733336012628" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="845.583305137026,622.400002066294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.3333339463341"
+              Start="0,0"
+              End="0,56.8333339463341">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.8333339463341" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

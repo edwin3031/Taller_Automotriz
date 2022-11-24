@@ -43,7 +43,8 @@ dc.DimIdCliente,
 dv.DimIdVehículo,
 ds.DimIdServicio,
 dme.DimIdMecánico,
-dr.DimIdRepuesto) Origen
+dr.DimIdRepuesto,
+sdm.Precio) Origen
 on
 Destino.DimIdCliente = Origen.DimClienteID and
 Destino.DimIdVehículo = Origen.DimVehiculoID and
@@ -61,3 +62,6 @@ when not matched then
 			values
 			(Origen.DimClienteID, Origen.DimServicioID, Origen.DimFechaID, Origen.DimMecanicoID,
 			Origen.DimVehiculoID, Origen.DimRepuestoID, Origen.Precio);
+
+			-- Verificación
+			select * from HechosMantenimientos
