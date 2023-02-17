@@ -133,13 +133,13 @@ go
 
  go
  --insertando datos de factura
-Insert into Factura (IDMantenimiento) values(1)
-Insert into Factura (IDMantenimiento) values(2)
-Insert into Factura (IDMantenimiento) values(3)
-Insert into Factura (IDMantenimiento) values(4)
-Insert into Factura (IDMantenimiento) values(6)
-Insert into Factura (IDMantenimiento) values(5)
-Insert into Factura (IDMantenimiento) values(1)
+Insert into Recibo (IDMantenimiento) values(1)
+Insert into Recibo (IDMantenimiento) values(2)
+Insert into Recibo (IDMantenimiento) values(3)
+Insert into Recibo (IDMantenimiento) values(4)
+Insert into Recibo (IDMantenimiento) values(6)
+Insert into Recibo (IDMantenimiento) values(5)
+Insert into Recibo (IDMantenimiento) values(1)
 
 go
  ----Consultando a todas las tablas
@@ -150,5 +150,5 @@ go
  select * from Mantenimiento
  select * from Vehículo
  select * from Mecánico
- select * from Factura
+ select * from Recibo
  select * from Mecánico

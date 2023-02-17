@@ -126,8 +126,8 @@ Telefono varchar (30)
 
 go
 
-create table Factura(
-No_Factura int identity(1,1) primary key not null,
+create table Recibo(
+No_Recibo int identity(1,1) primary key not null,
 IDMantenimiento int foreign key references Mantenimiento(IDMantenimiento) not null,
 
 )
