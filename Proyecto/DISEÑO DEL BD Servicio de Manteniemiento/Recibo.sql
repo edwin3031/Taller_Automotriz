@@ -13,7 +13,7 @@ END
 
 go
 
-CREATE PROCEDURE Factura_Detalle_Servicios
+CREATE PROCEDURE Recibo_Detalle_Servicios
 @IdMantenimiento int
 AS
 BEGIN
@@ -27,13 +27,13 @@ BEGIN
 	WHERE dm.IdMantenimiento = @IdMantenimiento
 END
 
--- exec Factura_Detalle_Servicios 3
+-- exec Recibo_Detalle_Servicios 1
 -- select * from Detalle_Mantenimiento
 -- select * from Servicio
 
 go
 
-CREATE PROCEDURE Factura_Detalle_Repuestos @IdMantenimiento int
+CREATE PROCEDURE Recibo_Detalle_Repuestos @IdMantenimiento int
 AS
 BEGIN
 	SELECT
@@ -53,7 +53,7 @@ BEGIN
 	GROUP BY r.IdRepuesto,  r.Descripcion, r.Marca, r.Modelo, dr.Cantidad, r.Precio
 END
 
--- exec Factura_Detalle_Repuestos 1
+-- exec Recibo_Detalle_Repuestos 1
 
 /*select * from Detalle_Repuesto
 select * from Repuesto
@@ -61,7 +61,7 @@ select * from Detalle_Mantenimiento*/
 
 go
 
-create PROCEDURE Factura_Header
+create PROCEDURE Recibo_Header
 @IdMantenimiento int
 
 AS
@@ -96,7 +96,7 @@ BEGIN
 	GROUP BY m.IdMantenimiento, c.[Primer Nombre] + ' ' + c.[Primer Apellido], v.Marca, v.Modelo, v.Año, m.Fecha_Ingreso, m.Fecha_Salida
 END
 
--- EXEC Factura_Header 1
+-- EXEC Recibo_Header 1
 
 
 go
@@ -153,7 +153,11 @@ END
 /*select * from Detalle_Repuesto
 select * from repuesto
 select * from Mantenimiento
-select * from Detalle_Mantenimiento*/
+select * from Detalle_Mantenimiento
+-- @Anio, @Mes
+exec Recaudacion_Servicio 2021,11
+*/
+
 GO
 	create procedure [dbo].[Recaudacion_Repuesto]
 	@Año int, @Mes int
@@ -192,6 +196,15 @@ GO
 
 GO
 
+/*
+select * from Mantenimiento
+select * from Detalle_Mantenimiento
+select * from Repuesto
+-- @anio, @mes
+exec Recaudacion_Repuesto 2021, 11
+*/
+
+
 create PROCEDURE [dbo].[Recaudacion_Mantenimientos]
 @Año int, @Mes int
 AS
@@ -223,3 +236,11 @@ IF exists (
 
 ELSE
 		SELECT 'Mes no encontrado'
+
+
+/*select * from Mantenimiento
+select * from Detalle_Mantenimiento
+select * from Repuesto
+Select * from Vehículo
+@anio, @mes
+exec Recaudacion_Mantenimientos 2021,11*/
