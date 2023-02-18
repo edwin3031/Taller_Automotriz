@@ -80,7 +80,8 @@ create table Detalle_Repuesto
 IdDetalle_Mantenimiento int ,
 IdRepuesto int,
 Cantidad int,
-Autorizacion char(2) 
+Autorizacion char(2),
+IdProveedor int
 )
 
 go
@@ -134,6 +135,19 @@ IDMantenimiento int foreign key references Mantenimiento(IDMantenimiento) not nu
 
 go
 
+create table Proveedor
+(IdProveedor int primary key identity(1,1),
+ [Primer Nombre] varchar(50) not null,
+ [Segundo Nombre] varchar(50) null,
+ [Primer Apellido] varchar(50) not null,
+ [Segundo Apellido] varchar(50) null,
+ Telefono varchar (40),
+ Correo varchar (60),
+ Estado varchar(60) null,
+)
+
+go
+
  ---Creando relacion entre tablas cliente y vehiculo
  ALTER TABLE Vehículo
   ADD FOREIGN KEY (IdCliente)
@@ -152,6 +166,10 @@ go
     ALTER TABLE Detalle_Repuesto
   ADD FOREIGN KEY (IdRepuesto)
   REFERENCES Repuesto(IdRepuesto)
+
+  ALTER TABLE Detalle_Repuesto
+  ADD FOREIGN KEY (IdProveedor)
+  REFERENCES Proveedor(IdProveedor)
 
   --creando relacion entre Servicio, mantenimiento, mecanico, y detallerepuesto en detallemantenimiento
     ALTER TABLE Detalle_Mantenimiento
