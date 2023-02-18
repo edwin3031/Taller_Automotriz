@@ -63,14 +63,14 @@ SELECT * FROM Repuesto
 
 go
 ---insertando datos en la tabla vehículo
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','X4',2018)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'BMW','SERIE 3',2010)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (4,'Audi','X4',2012)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (3,'Ford','F150',1999)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (2,'Seat','F50',2018)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (5,'Lexus','MA10',2014)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (6,'Seat','F50',2018)
-Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (7,'Opel','R50',2020)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'Hyundai','Eon',2015)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (1,'Toyota','Hilux',2018)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (4,'Kia','Picanto',2012)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (3,'Honda','Civic',2013)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (2,'Hyundai','Eon',2016)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (5,'Hyundai','Accent',2014)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (6,'Kia','Rio',2015)
+Insert into Vehículo (IDCliente,Marca,Modelo,Año) values (7,'Toyota','Hilux',2014)
 
 go
 
@@ -121,13 +121,13 @@ go
  go
 
  ---insertando datos en detallerepuesto
- Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (1,1,1,'si')
- Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (2,2,1,'no')
- Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (3,3,1,'no')
- Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (1,3,2,'si')
- Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion) values (4,4,1,'si')
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion,IdProveedor) values (1,1,1,'si',2)
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion,IdProveedor) values (2,2,1,'no',4)
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion,IdProveedor) values (3,3,1,'no',3)
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion,IdProveedor) values (1,3,2,'si',3)
+ Insert into Detalle_Repuesto (IDDetalle_Mantenimiento,IDRepuesto,Cantidad,Autorizacion,IdProveedor) values (4,4,1,'si',4)
 
- go
+go
 
  select * from Detalle_Repuesto
 
