@@ -142,6 +142,22 @@ Insert into Recibo (IDMantenimiento) values(5)
 Insert into Recibo (IDMantenimiento) values(1)
 
 go
+
+-- Insertando datos de proveedor
+Insert into Proveedor ([Primer Nombre],[Segundo Nombre],
+[Primer Apellido],[Segundo Apellido],Telefono,Correo,Estado) values
+('Alberto','Daniel','Ramirez','Cardenas','85694233','AlbertRa@gmail.com','Habilitado')
+Insert into Proveedor ([Primer Nombre],[Segundo Nombre],
+[Primer Apellido],[Segundo Apellido],Telefono,Correo,Estado) values
+('Alejandro','Rodrigo','Canales','Romero','82341256','Aljeandro154@gmail.com','Habilitado')
+Insert into Proveedor ([Primer Nombre],[Segundo Nombre],
+[Primer Apellido],[Segundo Apellido],Telefono,Correo,Estado) values
+('Michael','Roberto','Brenes','Arauz','87831913','MichaelBrenesA@gmail.com','Habilitado')
+Insert into Proveedor ([Primer Nombre],[Segundo Nombre],
+[Primer Apellido],[Segundo Apellido],Telefono,Correo,Estado) values
+('Carlos','Rafael','Obando','Sanchez','81347581','CarObando871@gmail.com','Habilitado')
+
+go
  ----Consultando a todas las tablas
  select * from Detalle_Repuesto
  select * from Cliente
