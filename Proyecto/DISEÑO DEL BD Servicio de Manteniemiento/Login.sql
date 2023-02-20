@@ -3,7 +3,8 @@
  go
 
  -- Creando Login
-create login AdminMantenimiento with password = 'proyecto123'
+--create login AdminMantenimiento with password = 'proyecto123'
+sp_addlogin 'AdminMantenimiento','proyecto123','Servicios_de_mantenimiento'
 
 -- Para eliminar login
 /*SELECT name, suser_sname(owner_sid) AS DBOwner FROM sys.databases
@@ -30,3 +31,19 @@ go
 	/*Creedenciales para login:
 	Usuario: uni1
 	Contraseña: 2022*/
+
+	--Creando Roles
+	create role Vendedor
+
+	grant select on database :: Servicios_de_mantenimiento to Vendedor
+
+	drop schema Ventas;
+
+	drop schema Operacion;
+
+	drop schema Empleados;
+
+	alter schema dbo transfer Empleados.Colaborador
+	alter schema dbo transfer Empleados.Usuario
+
+	exec Mostrar_Usuarios
