@@ -33,7 +33,8 @@ END
 
 go
 
-CREATE PROCEDURE Recibo_Detalle_Repuestos @IdMantenimiento int
+CREATE PROCEDURE Recibo_Detalle_Repuestos 
+@IdMantenimiento int
 AS
 BEGIN
 	SELECT
@@ -61,13 +62,13 @@ select * from Detalle_Mantenimiento*/
 
 go
 
-create PROCEDURE Recibo_Header
+CREATE PROCEDURE Recibo_Header
 @IdMantenimiento int
 
 AS
 BEGIN
 	SELECT
-	m.IdMantenimiento as IdFactura,
+	m.IdMantenimiento as IdRecibo,
 	c.[Primer Nombre] + ' ' + c.[Primer Apellido] as Cliente,
 	v.Marca as Marca,
 	v.Modelo as Modelo,
@@ -77,9 +78,8 @@ BEGIN
 	GETDATE() as Impreso,
 	dbo.Suma_Servicios(@IdMantenimiento) as TotalServicios,
 	ISNULL(SUM(dr.Cantidad * r.Precio), 2) as TotalRepuestos,
-	ROUND(dbo.Suma_Servicios(@IdMantenimiento) + ISNULL(SUM(dr.Cantidad * r.Precio), 2),2) as SubTotal,
-	ROUND((dbo.Suma_Servicios(@IdMantenimiento) + ISNULL(SUM(dr.Cantidad * r.Precio), 2) ) * 0.15 ,2)as IVA,
-	ROUND((dbo.Suma_Servicios(@IdMantenimiento) + ISNULL(SUM(dr.Cantidad * r.Precio), 2)) * 1.15,2) as Total
+	ROUND(dbo.Suma_Servicios(@IdMantenimiento) + ISNULL(SUM(dr.Cantidad * r.Precio), 2),2) as Total
+	
 
 	FROM Mantenimiento m
 	inner join Vehículo v
@@ -101,9 +101,7 @@ END
 
 go
 
--- Stored Procedures original backup
-
-create PROCEDURE [dbo].[Recaudacion_Servicio]
+CREATE PROCEDURE [dbo].[Recaudacion_Servicio]
 @Año int, @Mes int
 AS
 IF exists (
@@ -130,7 +128,7 @@ inner join Servicio s
 on dm.IdServicio = s.IdServicio
 inner join Mantenimiento m
 on dm.IdMantenimiento = m.IdMantenimiento
-WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Facturado'
+WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Generado'
 GROUP BY dm.IdMantenimiento, s.IdServicio, s.Descripción, s.Tipo_Mantenimiento
 
 ELSE
@@ -170,7 +168,7 @@ GO
 	inner join Mantenimiento ms on 
 	ms.IdMantenimiento=dms.IdMantenimiento
 	where 
-	ms.Estado = 'Facturado' and YEAR(ms.Fecha_Salida) = @Año and MONTH(ms.Fecha_Salida) = @Mes
+	ms.Estado = 'Generado' and YEAR(ms.Fecha_Salida) = @Año and MONTH(ms.Fecha_Salida) = @Mes
 	)
 
 	select 
@@ -191,7 +189,7 @@ GO
 	inner join Repuesto r 
 	on dr.IdRepuesto=r.IdRepuesto
 	where 
-	m.Estado = 'Facturado' and YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes
+	m.Estado = 'Generado' and YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes
 	group by  r.Descripcion,r.Marca,r.Modelo
 
 GO
@@ -231,7 +229,7 @@ IF exists (
 			on dm.IdMantenimiento = m.IdMantenimiento
 			inner join Vehículo v
 			on m.IdVehículo = v.IdVehículo
-			WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Facturado'
+			WHERE YEAR(m.Fecha_Salida) = @Año and MONTH(m.Fecha_Salida) = @Mes and m.Estado = 'Generado'
 			GROUP BY dm.IdMantenimiento,v.Marca,v.Modelo,m.Fecha_Ingreso,m.Fecha_Salida --, dm.IdDetalleMantenimiento
 
 ELSE
