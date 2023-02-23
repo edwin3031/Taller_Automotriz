@@ -192,7 +192,7 @@ namespace ProyectoFinalDeCurso.Views
                     string rpta = "";
 
 
-                    rpta = CServicio.Actualizar_Estado(Convert.ToInt32(this.dtServico.CurrentRow.Cells["IdServicio"].Value));
+                    rpta = CServicio.Actualizar_Estado(Convert.ToInt32(this.dtServico.CurrentRow.Cells["ID Servicio"].Value));
 
                     if (rpta.Equals("OK"))
                     {
