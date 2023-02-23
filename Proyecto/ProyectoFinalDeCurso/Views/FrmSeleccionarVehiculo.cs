@@ -50,9 +50,9 @@ namespace ProyectoFinalDeCurso.Views
                 DataGridViewRow dr = dtVehiculos.SelectedRows[0];
                 idVehiculo = (Convert.ToInt32((dr.Cells[0].Value)));
                 Console.WriteLine(idVehiculo);
-                nombreCliente = (dr.Cells[2].Value.ToString());
-                marca= (dr.Cells[3].Value.ToString());
-                modelo = (dr.Cells[4].Value.ToString());
+                nombreCliente = (dr.Cells[1].Value.ToString());
+                marca= (dr.Cells[2].Value.ToString());
+                modelo = (dr.Cells[3].Value.ToString());
                 frmMantenimiento.obtenerDatosVehiculos(idVehiculo,nombreCliente,marca,modelo);
                 this.Close();
             }
