@@ -73,9 +73,11 @@ namespace ProyectoFinalDeCurso.Views
             this.groupBox1.Controls.Add(this.dtRepuesto);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 249);
+            this.groupBox1.Location = new System.Drawing.Point(16, 306);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(994, 261);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1325, 321);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tabla Repuesto";
@@ -85,9 +87,10 @@ namespace ProyectoFinalDeCurso.Views
             this.txtFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltro.BackColor = System.Drawing.Color.White;
-            this.txtFiltro.Location = new System.Drawing.Point(6, 19);
+            this.txtFiltro.Location = new System.Drawing.Point(8, 23);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(985, 22);
+            this.txtFiltro.Size = new System.Drawing.Size(1312, 26);
             this.txtFiltro.TabIndex = 49;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
@@ -102,10 +105,12 @@ namespace ProyectoFinalDeCurso.Views
             this.dtRepuesto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtRepuesto.BackgroundColor = System.Drawing.Color.White;
             this.dtRepuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtRepuesto.Location = new System.Drawing.Point(6, 47);
+            this.dtRepuesto.Location = new System.Drawing.Point(8, 58);
+            this.dtRepuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtRepuesto.Name = "dtRepuesto";
             this.dtRepuesto.ReadOnly = true;
-            this.dtRepuesto.Size = new System.Drawing.Size(982, 208);
+            this.dtRepuesto.RowHeadersWidth = 51;
+            this.dtRepuesto.Size = new System.Drawing.Size(1309, 256);
             this.dtRepuesto.TabIndex = 1;
             this.dtRepuesto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtRepuesto_CellDoubleClick);
             // 
@@ -115,9 +120,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label4.Location = new System.Drawing.Point(531, 133);
+            this.label4.Location = new System.Drawing.Point(708, 164);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 18);
+            this.label4.Size = new System.Drawing.Size(124, 23);
             this.label4.TabIndex = 42;
             this.label4.Text = "Descripción:";
             // 
@@ -127,9 +133,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label3.Location = new System.Drawing.Point(15, 121);
+            this.label3.Location = new System.Drawing.Point(20, 149);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "Modelo:";
             // 
@@ -139,9 +146,10 @@ namespace ProyectoFinalDeCurso.Views
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(531, 75);
+            this.label2.Location = new System.Drawing.Point(708, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 18);
+            this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 40;
             this.label2.Text = "Cantidad:";
             // 
@@ -151,43 +159,48 @@ namespace ProyectoFinalDeCurso.Views
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(15, 75);
+            this.label1.Location = new System.Drawing.Point(20, 92);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
+            this.label1.Size = new System.Drawing.Size(76, 23);
             this.label1.TabIndex = 39;
             this.label1.Text = "Marca:";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDescripcion.Location = new System.Drawing.Point(650, 134);
+            this.txtDescripcion.Location = new System.Drawing.Point(867, 165);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(353, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(469, 22);
             this.txtDescripcion.TabIndex = 37;
             // 
             // txtModelo
             // 
             this.txtModelo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtModelo.Location = new System.Drawing.Point(104, 122);
+            this.txtModelo.Location = new System.Drawing.Point(139, 150);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(367, 20);
+            this.txtModelo.Size = new System.Drawing.Size(488, 22);
             this.txtModelo.TabIndex = 36;
             // 
             // txtCantidad
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCantidad.Location = new System.Drawing.Point(650, 76);
+            this.txtCantidad.Location = new System.Drawing.Point(867, 94);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(353, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(469, 22);
             this.txtCantidad.TabIndex = 35;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtMarca
             // 
             this.txtMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMarca.Location = new System.Drawing.Point(104, 76);
+            this.txtMarca.Location = new System.Drawing.Point(139, 94);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(367, 20);
+            this.txtMarca.Size = new System.Drawing.Size(488, 22);
             this.txtMarca.TabIndex = 34;
             // 
             // panel1
@@ -201,17 +214,19 @@ namespace ProyectoFinalDeCurso.Views
             this.panel1.Controls.Add(this.Cliente);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 41);
+            this.panel1.Size = new System.Drawing.Size(1357, 50);
             this.panel1.TabIndex = 54;
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(939, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1252, 4);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimizar.Size = new System.Drawing.Size(27, 25);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimizar.TabIndex = 11;
             this.btnMinimizar.TabStop = false;
@@ -220,9 +235,10 @@ namespace ProyectoFinalDeCurso.Views
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(965, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(1287, 4);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(20, 20);
+            this.btnRestaurar.Size = new System.Drawing.Size(27, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRestaurar.TabIndex = 10;
             this.btnRestaurar.TabStop = false;
@@ -232,9 +248,10 @@ namespace ProyectoFinalDeCurso.Views
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(965, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(1287, 4);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(20, 20);
+            this.btnMaximizar.Size = new System.Drawing.Size(27, 25);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMaximizar.TabIndex = 9;
             this.btnMaximizar.TabStop = false;
@@ -243,9 +260,10 @@ namespace ProyectoFinalDeCurso.Views
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(991, 3);
+            this.btnSalir.Location = new System.Drawing.Point(1321, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.Size = new System.Drawing.Size(27, 25);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 8;
             this.btnSalir.TabStop = false;
@@ -257,9 +275,10 @@ namespace ProyectoFinalDeCurso.Views
             this.Cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.Cliente.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cliente.ForeColor = System.Drawing.Color.White;
-            this.Cliente.Location = new System.Drawing.Point(448, 4);
+            this.Cliente.Location = new System.Drawing.Point(597, 5);
+            this.Cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cliente.Name = "Cliente";
-            this.Cliente.Size = new System.Drawing.Size(149, 33);
+            this.Cliente.Size = new System.Drawing.Size(186, 40);
             this.Cliente.TabIndex = 1;
             this.Cliente.Text = "Repuestos";
             // 
@@ -273,9 +292,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(13, 208);
+            this.btnNuevo.Location = new System.Drawing.Point(17, 256);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(182, 30);
+            this.btnNuevo.Size = new System.Drawing.Size(243, 37);
             this.btnNuevo.TabIndex = 83;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -291,9 +311,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardar.Location = new System.Drawing.Point(216, 208);
+            this.btnGuardar.Location = new System.Drawing.Point(288, 256);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(182, 30);
+            this.btnGuardar.Size = new System.Drawing.Size(243, 37);
             this.btnGuardar.TabIndex = 87;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -309,9 +330,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizar.Location = new System.Drawing.Point(419, 208);
+            this.btnActualizar.Location = new System.Drawing.Point(559, 256);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(182, 30);
+            this.btnActualizar.Size = new System.Drawing.Size(243, 37);
             this.btnActualizar.TabIndex = 85;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -327,12 +349,14 @@ namespace ProyectoFinalDeCurso.Views
             this.btnEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEstado.Location = new System.Drawing.Point(622, 208);
+            this.btnEstado.Location = new System.Drawing.Point(829, 256);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(182, 30);
+            this.btnEstado.Size = new System.Drawing.Size(243, 37);
             this.btnEstado.TabIndex = 84;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = false;
+            this.btnEstado.Visible = false;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // btnCancelar
@@ -345,9 +369,10 @@ namespace ProyectoFinalDeCurso.Views
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(825, 209);
+            this.btnCancelar.Location = new System.Drawing.Point(1100, 257);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(182, 30);
+            this.btnCancelar.Size = new System.Drawing.Size(243, 37);
             this.btnCancelar.TabIndex = 86;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -359,27 +384,29 @@ namespace ProyectoFinalDeCurso.Views
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.label5.Location = new System.Drawing.Point(15, 167);
+            this.label5.Location = new System.Drawing.Point(20, 206);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 18);
+            this.label5.Size = new System.Drawing.Size(73, 23);
             this.label5.TabIndex = 41;
             this.label5.Text = "Precio:";
             // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPrecio.Location = new System.Drawing.Point(104, 168);
+            this.txtPrecio.Location = new System.Drawing.Point(139, 207);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(367, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(488, 22);
             this.txtPrecio.TabIndex = 36;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // FrmRepuesto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 522);
+            this.ClientSize = new System.Drawing.Size(1357, 642);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnActualizar);
@@ -400,7 +427,8 @@ namespace ProyectoFinalDeCurso.Views
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1018, 522);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1357, 642);
             this.Name = "FrmRepuesto";
             this.Text = "Repuesto";
             this.Load += new System.EventHandler(this.FrmRepuesto_Load);

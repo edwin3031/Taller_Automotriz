@@ -72,7 +72,7 @@ namespace ProyectoFinalDeCurso.Views
                 this.btnGuardar.Enabled = false;
                 this.btnActualizar.Enabled = true;
                 this.btnCancelar.Enabled = false;
-                this.btnEstado.Enabled = true;
+                this.btnEstado.Enabled = false;
             }
         }
         private void Habilitar(bool valor)
