@@ -34,17 +34,17 @@ namespace ProyectoFinalDeCurso.Views
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label1 = new System.Windows.Forms.Label();
             this.ptMinimize = new System.Windows.Forms.PictureBox();
             this.ptExit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAcceder
@@ -96,7 +96,7 @@ namespace ProyectoFinalDeCurso.Views
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.Location = new System.Drawing.Point(310, 78);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(408, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(408, 25);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Text = "USUARIO";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -114,7 +114,7 @@ namespace ProyectoFinalDeCurso.Views
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.Location = new System.Drawing.Point(310, 157);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(408, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(408, 25);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.Text = "CONTRASEÑA";
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
@@ -133,6 +133,17 @@ namespace ProyectoFinalDeCurso.Views
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalDeCurso.Properties.Resources.desconocido;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 62);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // shapeContainer1
             // 
@@ -169,11 +180,11 @@ namespace ProyectoFinalDeCurso.Views
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(477, 0);
+            this.label1.Location = new System.Drawing.Point(368, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 33);
+            this.label1.Size = new System.Drawing.Size(269, 40);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Login";
+            this.label1.Text = "Inicio de Sesion";
             // 
             // ptMinimize
             // 
@@ -197,20 +208,9 @@ namespace ProyectoFinalDeCurso.Views
             this.ptExit.TabStop = false;
             this.ptExit.Click += new System.EventHandler(this.ptExit_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoFinalDeCurso.Properties.Resources.user_icon_icons1;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // FrmInicioSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(764, 291);
@@ -235,9 +235,9 @@ namespace ProyectoFinalDeCurso.Views
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmInicioSesion_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -268,7 +268,7 @@ namespace ProyectoFinalDeCurso.Views
             {
                 pnlSubMenuOperaciones.Visible = true;
                 //Botones que no funcionan
-                this.btnAsignarRepiuesto.Visible = false;
+                this.btnAsignarRepiuesto.Visible = true;
             }
             else
             {

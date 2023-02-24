@@ -454,6 +454,27 @@
     <None Include="Resources\off_logout_17916.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mantenimiento16.png" />
+    <None Include="Resources\mantenimiento161.png" />
+    <None Include="Resources\mantenimiento162.png" />
+    <None Include="Resources\mantenimiento163.png" />
+    <None Include="Resources\reparacion-de-autos.png" />
+    <None Include="Resources\repuesto.png" />
+    <None Include="Resources\motor.png" />
+    <None Include="Resources\Servicio.png" />
+    <None Include="Resources\mecanico1.png" />
+    <None Include="Resources\coche %281%29.png" />
+    <None Include="Resources\cliente.png" />
+    <None Include="Resources\guia.png" />
+    <None Include="Resources\informe-seo.png" />
+    <None Include="Resources\informe-seo %281%29.png" />
+    <None Include="Resources\saco-de-dinero %281%29.png" />
+    <None Include="Resources\desconocido.png" />
+    <None Include="Resources\usuario-verificado.png" />
+    <None Include="Resources\usuario-verificado %281%29.png" />
+    <None Include="Resources\digital.png" />
+    <None Include="Resources\catalogo.png" />
+    <None Include="Resources\apagado.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />

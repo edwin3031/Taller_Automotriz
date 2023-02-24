@@ -161,8 +161,9 @@ namespace ProyectoFinalDeCurso.Views
                 string rpta = "";
 
                 int id=0;
-               
-                id= Convert.ToInt32(this.dgvMantenimientos.CurrentRow.Cells["IdDetalleMantenimiento"].Value);
+
+                //id= Convert.ToInt32(this.dgvMantenimientos.CurrentRow.Cells["IdDetalleMantenimiento"].Value);
+                id = Convert.ToInt32(this.dgvMantenimientos.CurrentRow.Cells[0].Value);
                 if (id == 0)
                 {
                     MessageBox.Show("Debe buscar un repuesto" +
@@ -222,7 +223,7 @@ namespace ProyectoFinalDeCurso.Views
             DataGridViewRow dr = dgvMantenimientos.SelectedRows[0];
             idMantenimiento = (Convert.ToInt32((dr.Cells[0].Value)));
             dgvServicios.DataSource = CAsignarRepuesto.Mostrar_Mantenimientos_Servicios(idMantenimiento);
-            this.dgvServicios.Columns[0].Visible = false;
+            this.dgvServicios.Columns[0].Visible = true;
         }
 
         private void dgvMantenimientos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -239,7 +240,7 @@ namespace ProyectoFinalDeCurso.Views
             DataGridViewRow dr = dgvMantenimientos.SelectedRows[0];
             idMantenimiento = (Convert.ToInt32((dr.Cells[0].Value)));
             dgvServicios.DataSource = CAsignarRepuesto.Mostrar_Mantenimientos_Servicios(idMantenimiento);
-            this.dgvServicios.Columns[0].Visible = false;
+            this.dgvServicios.Columns[0].Visible = true;
         }
     }
 }

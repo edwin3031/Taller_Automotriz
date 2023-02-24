@@ -62,7 +62,7 @@ namespace ProyectoFinalDeCurso.Data
                 };
                 SqlParameter ParID = new SqlParameter()
                 {
-                    ParameterName = "IdMantenimiento",
+                    ParameterName = "@IdMantenimiento",
                     SqlDbType = SqlDbType.Int,
                     Value = idMantenimiento,
 
@@ -102,7 +102,7 @@ namespace ProyectoFinalDeCurso.Data
 
                 SqlParameter ParID = new SqlParameter()
                 {
-                    ParameterName="IdDetalleMantenimiento",
+                    ParameterName="@IdDetalleMantenimiento",
                     SqlDbType=SqlDbType.Int,
                     Value=idDetalleMantenimiento,
 
