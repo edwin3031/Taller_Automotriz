@@ -29,3 +29,17 @@ Este proyecto es una aplicación de escritorio desarrollada en **C#** con **SQL 
 1. Instalar **SQL Server** y configurar la base de datos.
 2. Ejecutar el script SQL para crear las tablas necesarias.
 3. Descargar el ejecutable **.exe** y ejecutar la aplicación.
+
+## Capturas de Pantalla
+### Reportes en Power BI
+![Porcentaje de modelos de vehiculos por marca y año](img/img1.png)
+
+![Salarios por nombre](img/img2.png)
+
+![Cantidad de servicios dados](img/img3.png)
+
+![Tabla de mantenimientos y identificadores](img/img4.png)
+
+![Tabla de clientes](img/img5.png)
+
+![Porcentaje del precio de descripcion y el tipo de mantenimiento](img/img6.png)
