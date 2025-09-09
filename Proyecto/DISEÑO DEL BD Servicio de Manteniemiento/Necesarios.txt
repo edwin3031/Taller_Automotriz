@@ -1,3 +1,4 @@
 Instalación: 
-- Microsoft visual basic packs 12
+- Microsoft visual basic packs 12 (Herramientas > Administrador de paquetes NuGet > Consola del administrador de paquetes > comando: Install-Package VisualBasic.PowerPacks.Vs -Version 1.0.0)
+
 - SQL Server Integration Services Projects

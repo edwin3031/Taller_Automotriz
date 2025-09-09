@@ -8,8 +8,7 @@ namespace ProyectoFinalDeCurso.Data
 {
     class Conexion
     {
-        public static string conexion = "Data Source=LAPTOP-6891DS78;" +
-                                         "Initial Catalog=Servicios_de_Mantenimiento; user=AdminMantenimiento; password =proyecto123";
+        public static string conexion = "Data Source=DESKTOP-BSQES3D;" +
+                                         "Initial Catalog=Servicios_de_Mantenimiento; user=AdminMantenimiento; password=proyecto123";
     }
 }
-    
